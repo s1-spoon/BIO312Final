@@ -1,6 +1,15 @@
 # BIO312Final
 This is my final repository for final term paper for the Bionformatics course taught by Professor Joshua Rest.
 This repository will walk you throught all the steps I took to support the basis of my paper.
+In order for you to be able to view the files I created for my analysis, the original directory has been copied and placed in this repository using the following codes
+```
+mkdir ~/bio312final/FIG
+cp -r ~/lab03-$MYGIT/FIG ~/bio312final/FIG
+
+cp -r ~/lab04-$MYGIT/FIG ~/bio312final/FIG
+
+cp -r ~/lab05-$MYGIT/FIG ~/bio312final/FIG
+```
 
 ## Introduction 
 
@@ -8,8 +17,8 @@ Below is the table of contents.
 1. BLAST Proteome Database
 2. Filtering out HSP to my Query Sequence
 3. Alignment to Query Sequence
-4. Constructing Gene Tree with Best Alignment
-5. Cosntructing Species Tree
+4. Constructing Species Tree
+5. Constructing Gene Tree with Best Alignment
 6. Reconciling Gene Tree within Speces Tree
 
 Clone my final repository
@@ -100,12 +109,6 @@ grep -o -E "^[A-Z]\.[a-z]+" FIG.blastp.detail.filtered.out  | sort | uniq -c
 | S.townsendi  |     3      |
 | X.laevis     |     2      |
 
-## The original directory has been copied and placed in this repository using the following code
-```
-mkdir ~/bio312final/FIG
-cp -r ~/lab03-$MYGIT/FIG ~/bio312final/FIG
-```
-
 # 3. Alignment to Query Sequence
 Use [seqkit](https://bioinf.shenwei.me/seqkit/) to grab "pattern file" filtered out sequences from proteome file and naming the file "FIG.homologs.fas"
 ```
@@ -155,9 +158,56 @@ alignbuddy -pi ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | awk ' (NR>2)  { for (i=2
 ## T-Coffee: 41.78 (VAR = 568.39, STD = 23.84)
 ## Alignbuddy: 29.5956
 
-## The original directory has been copied and placed in this repository using the following code
+# 4. Constructing Species Tree
+I use Newick Utilities to constsruct a species tree.
+## Newick Utilities Version: 
+I constructed a ASCII rooted species tree for my 11 species, and generated a graphic (.svg file)
 ```
-cp -r ~/lab04-$MYGIT/FIG ~/bio312final/FIG
+echo "((((((F.catus,E.caballus)Laurasiatheria,H.sapiens)Boreoeutheria,(S.townsendi,(C.mydas,G.gallus)Archelosauria)Sauria)Amniota,X.laevis)Tetrapoda,(D.rerio,(S.salar,G.aculeatus)Euteleosteomorpha)Clupeocephala)Euteleostomi,C.carcharias)Gnathostomata;"  > ~/lab05-$MYGIT/species.tre
+
+nw_display ~/lab05-$MYGIT/species.tre
+nw_display -s ~/lab05-$MYGIT/species.tre > ~/lab05-$MYGIT/species.tre.svg
+```
+I converted the .svg to .pdf
+```
+convert ~/lab05-$MYGIT/species.tre.svg ~/lab05-$MYGIT/species.tre.pdf
+```
+# 5. Constructing Gene Tree with Best Alignment
+I used IQ-TREE to find the maximum likehood tree estimate. 
+## IQTree Version: IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  1 2024
+(Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong)
+
+I calculated the the optimal amino acid substitution model and amino acid frequencies. At the same time a tree search and estimate tree branch lengths, which are the bootstrap values.
+```
+iqtree -s ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas -bb 1000 -nt 2 
+```
+## RESULT: log likelihood of the optimal tree that IQ-TREE found: -29778.492
+
+To find the rate heterogeneity multiplier to estimate the tree, I used the following code:
+```
+less ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.iqtree
+```
+## RESULT: Model of rate heterogeneity: Invar+FreeRate with 4 categories 
+
+I used gotree to construct a midpoint rooted gene tree. The unrooted gene tree to constructed into a midpoint rooted tree using the code below.
+```
+gotree reroot midpoint -i ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.treefile -o ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
+```
+The rooted tree is a phylogram gene tree using Newick Utilities graphic (.svg), which gets converted into a .pdf file using the codes below. The different branch lengths are the bootstrap values previously calculated.
+```
+nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile  | nw_display -
+
+nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile | nw_display -w 1000 -b 'opacity:0' -s  >  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.svg -
+
+convert  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.svg  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.pdf
+```
+
+The phylogram is converted to a cladogram gene tree using Newick Utilities graphic (.svg), which gets converted into a .pdf file using the codes below. The cladogram is easier to view than the phylogram because the length of the branches are uniform.
+```
+nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile | nw_topology - | nw_display -s  -w 1000 > ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.svg -
+
+convert ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.svg ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.pdf
 ```
 
 

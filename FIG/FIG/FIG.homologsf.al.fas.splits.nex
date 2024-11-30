@@ -1,0 +1,232 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=42;
+TAXLABELS
+[1] 'D.rerio_fig4b_polyphosphoinositide_phosphatase'
+[2] 'D.rerio_fig4a_polyphosphoinositide_phosphatase_isoform_X1'
+[3] 'E.caballus_FIG4_polyphosphoinositide_phosphatase'
+[4] 'F.catus_FIG4_polyphosphoinositide_phosphatase_isoform_X1'
+[5] 'H.sapiens_FIG4_polyphosphoinositide_phosphatase'
+[6] 'C.mydas_FIG4_polyphosphoinositide_phosphatase_isoform_X1'
+[7] 'G.gallus_FIG4_polyphosphoinositide_phosphatase'
+[8] 'S.townsendi_FIG4_polyphosphoinositide_phosphatase'
+[9] 'C.carcharias_fig4a_polyphosphoinositide_phosphatase_isoform_X1'
+[10] 'X.laevis_fig4.L_polyphosphoinositide_phosphatase_isoform_X2'
+[11] 'G.aculeatus_fig4a_polyphosphoinositide_phosphatase_isoform_X1'
+[12] 'S.salar_fig4a_polyphosphoinositide_phosphatase'
+[13] 'S.townsendi_SYNJ1_LOW_QUALITY_PROTEIN_synaptojanin1'
+[14] 'F.catus_SYNJ1_synaptojanin1_isoform_X1'
+[15] 'E.caballus_SYNJ1_synaptojanin1_isoform_X8'
+[16] 'H.sapiens_SYNJ1_synaptojanin1_isoform_X8'
+[17] 'C.mydas_SYNJ1_synaptojanin1_isoform_X1'
+[18] 'G.gallus_SYNJ1_synaptojanin1_isoform_X8'
+[19] 'G.aculeatus_sacm1la_phosphatidylinositol3phosphatase_SAC1A_isofor'
+[20] 'S.townsendi_SACM1L_phosphatidylinositol3phosphatase_SAC1'
+[21] 'C.mydas_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1'
+[22] 'C.carcharias_LOC121276208_phosphatidylinositol3phosphatase_SAC1li'
+[23] 'G.gallus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x'
+[24] 'D.rerio_sacm1la_phosphatidylinositide_phosphatase_SAC1B'
+[25] 'S.salar_sacm1la_phosphatidylinositol3phosphatase_SAC1A'
+[26] 'S.salar_LOC106570660_phosphatidylinositol3phosphatase_SAC1A'
+[27] 'X.laevis_sacm1l.L_phosphatidylinositol3phosphatase_SAC1_isoform_1'
+[28] 'F.catus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1'
+[29] 'D.rerio_sacm1lb_phosphatidylinositide_phosphatase_SAC1A'
+[30] 'G.aculeatus_LOC120810060_phosphatidylinositol3phosphatase_SAC1B'
+[31] 'S.salar_LOC106605518_phosphatidylinositol3phosphatase_SAC1Blike'
+[32] 'S.salar_LOC106579366_phosphatidylinositol3phosphatase_SAC1B'
+[33] 'E.caballus_SACM1L_phosphatidylinositide_phosphatase_SAC1_isoform_'
+[34] 'H.sapiens_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x'
+[35] 'C.mydas_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2'
+[36] 'G.gallus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2'
+[37] 'F.catus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X1'
+[38] 'H.sapiens_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_1'
+[39] 'S.salar_inpp5f_phosphatidylinositide_phosphatase_SAC2'
+[40] 'S.salar_LOC106604534_phosphatidylinositide_phosphatase_SAC2like_i'
+[41] 'D.rerio_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform_X1'
+[42] 'G.aculeatus_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=42 nsplits=175;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 4,
+	100	 5,
+	94	 4 5,
+	100	 3 4 5,
+	100	 6,
+	100	 7,
+	33	 6 7,
+	100	 8,
+	30	 6 7 8,
+	30	 3 4 5 6 7 8,
+	100	 10,
+	28	 3 4 5 6 7 8 10,
+	100	 9,
+	15	 3 4 5 6 7 8 9 10,
+	100	 13,
+	100	 17,
+	95	 13 17,
+	100	 14,
+	100	 16,
+	76	 14 16,
+	100	 15,
+	91	 14 15 16,
+	66	 13 14 15 16 17,
+	100	 18,
+	100	 13 14 15 16 17 18,
+	100	 19,
+	100	 25,
+	100	 26,
+	100	 25 26,
+	100	 19 25 26,
+	100	 24,
+	100	 19 24 25 26,
+	100	 29,
+	100	 31,
+	100	 32,
+	100	 31 32,
+	76	 29 31 32,
+	100	 30,
+	96	 29 30 31 32,
+	100	 19 24 25 26 29 30 31 32,
+	100	 20,
+	100	 23,
+	28	 20 23,
+	100	 21,
+	85	 20 21 23,
+	100	 28,
+	100	 33,
+	99	 28 33,
+	100	 34,
+	99	 28 33 34,
+	74	 20 21 23 28 33 34,
+	100	 27,
+	67	 20 21 23 27 28 33 34,
+	100	 22,
+	1	 20 21 22 23 27 28 33 34,
+	100	 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34,
+	47	 1 2 3 4 5 6 7 8 9 10 11 12 35 36 37 38 39 40 41 42,
+	100	 35,
+	100	 36,
+	99	 35 36,
+	100	 37,
+	100	 38,
+	100	 37 38,
+	100	 35 36 37 38,
+	100	 41,
+	91	 35 36 37 38 41,
+	100	 39,
+	100	 40,
+	93	 39 40,
+	13	 35 36 37 38 39 40 41,
+	100	 42,
+	100	 35 36 37 38 39 40 41 42,
+	100	 1 2 3 4 5 6 7 8 9 10 11 12,
+	95	 1 2 11 12,
+	96	 1 11 12,
+	100	 11,
+	92	 1 12,
+	100	 12,
+	100	 1,
+	60	 21 23,
+	9	 21 23 28 33 34,
+	44	 19 20 21 23 24 25 26 27 28 29 30 31 32 33 34,
+	75	 35 36 37 38 41 42,
+	8	 1 2 3 4 5 6 7 8 10 11 12,
+	1	 2 3 4 5 6 7 8 9 10,
+	1	 2 3 4 5 6 7 8 9 10 11,
+	49	 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18,
+	1	 1 2 3 4 5 6 7 8 9 10 11,
+	12	 39 40 42,
+	5	 39 40 41 42,
+	2	 29 30,
+	65	 1 2 3 4 5 6 8 9 10 11 12,
+	62	 1 2 3 4 5 8 9 10 11 12,
+	67	 1 2 3 4 5 9 10 11 12,
+	68	 1 2 9 10 11 12,
+	77	 1 2 9 11 12,
+	31	 13 17 18,
+	55	 19 22 24 25 26 29 30 31 32,
+	26	 19 22 24 25 26 27 29 30 31 32,
+	24	 19 20 21 22 23 24 25 26 27 29 30 31 32,
+	7	 21 28 33 34,
+	0	 1 11,
+	6	 6 8,
+	2	 13 14 15 16,
+	0	 19 20 21 22 23 24 25 26 27 29 30 31 32 34,
+	3	 13 15 17 18,
+	0	 13 15 16 17 18,
+	21	 30 31 32,
+	2	 20 21 23 27,
+	0	 13 14 17 18,
+	1	 13 14 15 17 18,
+	22	 14 15,
+	7	 11 12,
+	4	 1 3 4 5 6 7 8 9 10 11 12,
+	7	 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34,
+	0	 2 11 12,
+	1	 1 2 3 4 5 9 11 12,
+	3	 35 36 37 38 42,
+	1	 33 34,
+	3	 14 15 16 18,
+	1	 14 15 16 17 18,
+	1	 35 36 37 38 39 40 42,
+	2	 1 2 3 4 5 6 7 9 10 11 12,
+	2	 3 4 5 8,
+	4	 13 14 15 16 17 18 35 36 37 38 39 40 41 42,
+	6	 35 36 37 38 40 41 42,
+	2	 13 16 17 18,
+	5	 13 14 16 17 18,
+	1	 1 2 8 9 10 11 12,
+	1	 1 2 3 4 5 7 8 9 10 11 12,
+	5	 3 5,
+	2	 17 18,
+	2	 19 24 25 26 30 31 32,
+	1	 3 4,
+	1	 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33,
+	0	 27 28 33 34,
+	1	 19 24 25 26 29 31 32,
+	1	 3 4 5 6,
+	0	 3 4 5 6 8,
+	1	 35 36 37 38 39 41 42,
+	0	 19 24 25 26 29,
+	5	 19 20 22 24 25 26 27 29 30 31 32,
+	5	 19 20 22 23 24 25 26 27 29 30 31 32,
+	3	 1 2 3 4 5 6 7 8 9 11 12,
+	0	 19 20 21 22 23 24 25 26 29 30 31 32,
+	0	 19 24 25 26 27 29 30 31 32,
+	0	 14 15 16 17,
+	1	 1 2 12,
+	0	 35 36 37 38 39 40,
+	0	 39 40 41,
+	1	 35 37 38,
+	1	 3 4 5 6 7 8 9 10 11 12,
+	1	 19 24 25 26 30,
+	1	 28 34,
+	0	 19 20 21 22 24 25 26 27 29 30 31 32,
+	1	 13 14 15 16 18,
+	1	 20 21,
+	0	 3 4 5 6 7,
+	1	 19 24 25 26 31 32,
+	0	 3 4 5 10,
+	0	 1 2 3 4 5 7 9 10 11 12,
+	1	 3 4 5 6 7 8 9 10 11,
+	0	 13 18,
+	0	 1 2 3 4 5 6 9 10 11 12,
+	1	 1 2,
+	0	 2 3 4 5 6 7 8 9 10 11 12,
+	0	 37 38 39 40 41 42,
+	0	 19 24 25 26 29 30,
+	0	 19 22 24 25 26 27 28 29 30 31 32 33 34,
+	0	 15 16,
+	0	 41 42,
+	0	 6 7 8 10,
+	0	 20 21 22 23 28 33 34,
+;
+END; [Splits]
+

@@ -1,0 +1,342 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  1 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    ip-172-31-28-105.ec2.internal (AVX2, FMA3, 7 GB RAM)
+Command: iqtree -s /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas -bb 1000 -nt 2
+Seed:    57351 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Sep 26 13:51:22 2024
+Kernel:  AVX+FMA - 2 threads (2 CPU cores detected)
+
+Reading alignment file /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas ... Fasta format detected
+Reading fasta file: done in 0.0017116 secs using 99.85% CPU
+Alignment most likely contains protein sequences
+WARNING: 2 sites contain only gaps or ambiguous characters.
+Alignment has 42 sequences with 2364 columns, 1702 distinct patterns
+1081 parsimony-informative, 402 singleton sites, 881 constant sites
+                                                                   Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000162615 secs using 99.01% CPU
+   1  D.rerio_fig4b_polyphosphoinositide_phosphatase                      87.35%    passed     16.96%
+   2  D.rerio_fig4a_polyphosphoinositide_phosphatase_isoform_X1           77.79%    passed     27.46%
+   3  E.caballus_FIG4_polyphosphoinositide_phosphatase                    61.63%    passed     82.19%
+   4  F.catus_FIG4_polyphosphoinositide_phosphatase_isoform_X1            61.63%    passed     83.16%
+   5  H.sapiens_FIG4_polyphosphoinositide_phosphatase                     61.63%    passed     90.43%
+   6  C.mydas_FIG4_polyphosphoinositide_phosphatase_isoform_X1            61.55%    passed     53.91%
+   7  G.gallus_FIG4_polyphosphoinositide_phosphatase                      61.55%    passed     77.05%
+   8  S.townsendi_FIG4_polyphosphoinositide_phosphatase                   61.68%    passed     86.89%
+   9  C.carcharias_fig4a_polyphosphoinositide_phosphatase_isoform_X1      61.46%    passed     76.37%
+  10  X.laevis_fig4.L_polyphosphoinositide_phosphatase_isoform_X2         61.63%    passed     90.20%
+  11  G.aculeatus_fig4a_polyphosphoinositide_phosphatase_isoform_X1       60.91%    passed     18.04%
+  12  S.salar_fig4a_polyphosphoinositide_phosphatase                      61.68%    passed     25.71%
+  13  S.townsendi_SYNJ1_LOW_QUALITY_PROTEIN_synaptojanin1                 34.01%    failed      0.23%
+  14  F.catus_SYNJ1_synaptojanin1_isoform_X1                              33.38%    failed      0.00%
+  15  E.caballus_SYNJ1_synaptojanin1_isoform_X8                           31.35%    failed      0.00%
+  16  H.sapiens_SYNJ1_synaptojanin1_isoform_X8                            31.81%    failed      0.00%
+  17  C.mydas_SYNJ1_synaptojanin1_isoform_X1                              31.01%    failed      0.01%
+  18  G.gallus_SYNJ1_synaptojanin1_isoform_X8                             32.91%    failed      0.00%
+  19  G.aculeatus_sacm1la_phosphatidylinositol3phosphatase_SAC1A_isofor   73.65%    passed     38.62%
+  20  S.townsendi_SACM1L_phosphatidylinositol3phosphatase_SAC1            75.04%    passed     29.48%
+  21  C.mydas_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1     75.08%    passed     36.14%
+  22  C.carcharias_LOC121276208_phosphatidylinositol3phosphatase_SAC1li   73.35%    passed     10.97%
+  23  G.gallus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x    74.03%    passed     38.27%
+  24  D.rerio_sacm1la_phosphatidylinositide_phosphatase_SAC1B             75.21%    passed     18.08%
+  25  S.salar_sacm1la_phosphatidylinositol3phosphatase_SAC1A              75.21%    passed     12.87%
+  26  S.salar_LOC106570660_phosphatidylinositol3phosphatase_SAC1A         75.21%    passed     17.45%
+  27  X.laevis_sacm1l.L_phosphatidylinositol3phosphatase_SAC1_isoform_1   74.32%    passed     52.69%
+  28  F.catus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1     75.17%    passed     50.91%
+  29  D.rerio_sacm1lb_phosphatidylinositide_phosphatase_SAC1A             75.21%    passed     24.81%
+  30  G.aculeatus_LOC120810060_phosphatidylinositol3phosphatase_SAC1B     75.21%    passed     20.14%
+  31  S.salar_LOC106605518_phosphatidylinositol3phosphatase_SAC1Blike     75.21%    passed      8.43%
+  32  S.salar_LOC106579366_phosphatidylinositol3phosphatase_SAC1B         75.21%    passed      6.89%
+  33  E.caballus_SACM1L_phosphatidylinositide_phosphatase_SAC1_isoform_   75.17%    passed     57.44%
+  34  H.sapiens_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x   74.28%    passed     51.96%
+  35  C.mydas_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2    52.12%    passed     12.19%
+  36  G.gallus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2   52.37%    passed     10.15%
+  37  F.catus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X1    52.07%    passed     46.28%
+  38  H.sapiens_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_1   52.12%    passed     29.37%
+  39  S.salar_inpp5f_phosphatidylinositide_phosphatase_SAC2               52.33%    passed     50.57%
+  40  S.salar_LOC106604534_phosphatidylinositide_phosphatase_SAC2like_i   52.41%    passed     56.83%
+  41  D.rerio_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform_X1    52.37%    passed     66.27%
+  42  G.aculeatus_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform   51.86%    passed     34.58%
+WARNING: 36 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                               61.65%  6 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.033 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -30221.390
+2. Current log-likelihood: -30219.527
+Optimal log-likelihood: -30218.565
+Proportion of invariable sites: 0.053
+Gamma shape alpha: 0.889
+Parameters optimization took 2 rounds (1.443 sec)
+Time for fast ML tree search: 6.636 seconds
+
+NOTE: ModelFinder requires 118 MB RAM!
+ModelFinder will test up to 1232 protein models (sample size: 2364 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            31046.557    81  62255.114    62260.935    62722.331
+  2  LG+I          30824.010    82  61812.020    61817.988    62285.005
+  3  LG+G4         30224.344    82  60612.688    60618.656    61085.673
+  4  LG+I+G4       30217.530    83  60601.060    60607.175    61079.813
+  5  LG+R2         30376.111    83  60918.221    60924.337    61396.974
+  6  LG+R3         30219.516    85  60609.032    60615.449    61099.321
+  7  LG+R4         30188.937    87  60551.874    60558.601    61053.700
+  8  LG+R5         30179.664    89  60537.328    60544.373    61050.689
+  9  LG+R6         30174.036    91  60530.071    60537.441    61054.969
+ 14  LG+I+R2       30282.564    84  60733.128    60739.394    61217.649
+ 15  LG+I+R3       30164.891    86  60501.783    60508.355    60997.840
+ 16  LG+I+R4       30158.650    88  60493.301    60500.186    61000.895
+ 37  LG+F+I+R3     30081.243    105 60372.486    60382.344    60978.138
+ 38  LG+F+I+R4     30075.145    107 60364.289    60374.534    60981.477
+ 59  WAG+I+R3      30176.045    86  60524.090    60530.662    61020.148
+ 60  WAG+I+R4      30171.528    88  60519.056    60525.942    61026.650
+ 81  WAG+F+I+R3    30131.433    105 60472.866    60482.724    61078.517
+ 82  WAG+F+I+R4    30126.523    107 60467.046    60477.291    61084.234
+103  JTT+I+R3      29829.656    86  59831.311    59837.883    60327.369
+104  JTT+I+R4      29822.014    88  59820.027    59826.913    60327.621
+125  JTT+F+I+R3    29804.638    105 59819.277    59829.135    60424.929
+126  JTT+F+I+R4    29796.949    107 59807.898    59818.142    60425.085
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+147  Q.pfam+I+R3   30149.920    86  60471.840    60478.412    60967.897
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+148  Q.pfam+I+R4   30142.405    88  60460.810    60467.695    60968.403
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+169  Q.pfam+F+I+R3 30071.581    105 60353.161    60363.019    60958.813
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+170  Q.pfam+F+I+R4 30063.640    107 60341.280    60351.525    60958.468
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+191  Q.bird+I+R3   29886.162    86  59944.324    59950.896    60440.381
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+192  Q.bird+I+R4   29872.429    88  59920.859    59927.744    60428.452
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+213  Q.bird+F+I+R3 29893.073    105 59996.146    60006.005    60601.798
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+214  Q.bird+F+I+R4 29879.023    107 59972.046    59982.290    60589.233
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+235  Q.mammal+I+R3 29794.897    86  59761.795    59768.367    60257.852
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+236  Q.mammal+I+R4 29782.445    88  59740.891    59747.776    60248.484
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+257  Q.mammal+F+I+R3 29812.372    105 59834.744    59844.602    60440.396
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+258  Q.mammal+F+I+R4 29799.330    107 59812.661    59822.905    60429.849
+279  Q.insect+I+R3 30016.119    86  60204.238    60210.810    60700.296
+280  Q.insect+I+R4 30006.433    88  60188.866    60195.751    60696.460
+301  Q.insect+F+I+R3 29877.547    105 59965.094    59974.952    60570.745
+302  Q.insect+F+I+R4 29867.889    107 59949.778    59960.022    60566.965
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+323  Q.plant+I+R3  29848.430    86  59868.861    59875.433    60364.918
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+324  Q.plant+I+R4  29837.354    88  59850.709    59857.594    60358.302
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+345  Q.plant+F+I+R3 29793.302    105 59796.604    59806.462    60402.256
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+346  Q.plant+F+I+R4 29782.927    107 59779.853    59790.098    60397.041
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+367  Q.yeast+I+R3  30177.135    86  60526.271    60532.843    61022.328
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+368  Q.yeast+I+R4  30168.218    88  60512.437    60519.322    61020.031
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+389  Q.yeast+F+I+R3 29985.321    105 60180.642    60190.500    60786.294
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+390  Q.yeast+F+I+R4 29976.628    107 60167.257    60177.502    60784.445
+411  JTTDCMut+I+R3 29838.443    86  59848.886    59855.458    60344.943
+412  JTTDCMut+I+R4 29829.708    88  59835.416    59842.302    60343.010
+433  JTTDCMut+F+I+R3 29810.652    105 59831.303    59841.162    60436.955
+434  JTTDCMut+F+I+R4 29802.049    107 59818.099    59828.343    60435.286
+455  DCMut+I+R3    30302.308    86  60776.616    60783.188    61272.674
+456  DCMut+I+R4    30293.920    88  60763.840    60770.725    61271.433
+477  DCMut+F+I+R3  30159.098    105 60528.196    60538.055    61133.848
+478  DCMut+F+I+R4  30151.919    107 60517.838    60528.083    61135.026
+499  VT+I+R3       30168.513    86  60509.027    60515.598    61005.084
+500  VT+I+R4       30163.342    88  60502.685    60509.570    61010.279
+521  VT+F+I+R3     30146.113    105 60502.225    60512.084    61107.877
+522  VT+F+I+R4     30140.728    107 60495.455    60505.700    61112.643
+543  PMB+I+R3      30538.359    86  61248.718    61255.290    61744.776
+544  PMB+I+R4      30533.515    88  61243.030    61249.916    61750.624
+565  PMB+F+I+R3    30493.543    105 61197.087    61206.945    61802.738
+566  PMB+F+I+R4    30488.653    107 61191.307    61201.552    61808.495
+587  Blosum62+I+R3 30614.310    86  61400.621    61407.192    61896.678
+588  Blosum62+I+R4 30607.970    88  61391.941    61398.826    61899.534
+609  Blosum62+F+I+R3 30518.677    105 61247.354    61257.213    61853.006
+610  Blosum62+F+I+R4 30512.186    107 61238.372    61248.617    61855.560
+631  Dayhoff+I+R3  30300.722    86  60773.444    60780.016    61269.502
+632  Dayhoff+I+R4  30292.335    88  60760.670    60767.556    61268.264
+653  Dayhoff+F+I+R3 30157.778    105 60525.555    60535.414    61131.207
+654  Dayhoff+F+I+R4 30150.630    107 60515.260    60525.505    61132.448
+675  mtREV+I+R3    31307.584    86  62787.169    62793.741    63283.226
+676  mtREV+I+R4    31296.164    88  62768.328    62775.214    63275.922
+697  mtREV+F+I+R3  30229.880    105 60669.760    60679.619    61275.412
+698  mtREV+F+I+R4  30220.491    107 60654.982    60665.226    61272.170
+719  mtART+I+R3    31836.315    86  63844.630    63851.202    64340.687
+720  mtART+I+R4    31818.655    88  63813.310    63820.195    64320.904
+741  mtART+F+I+R3  30637.285    105 61484.571    61494.429    62090.222
+742  mtART+F+I+R4  30625.235    107 61464.470    61474.714    62081.658
+763  mtZOA+I+R3    31162.295    86  62496.589    62503.161    62992.647
+764  mtZOA+I+R4    31150.266    88  62476.531    62483.417    62984.125
+785  mtZOA+F+I+R3  30260.794    105 60731.588    60741.446    61337.240
+786  mtZOA+F+I+R4  30251.832    107 60717.663    60727.908    61334.851
+807  mtMet+I+R3    31235.796    86  62643.591    62650.163    63139.649
+808  mtMet+I+R4    31220.110    88  62616.220    62623.105    63123.814
+829  mtMet+F+I+R3  30029.831    105 60269.661    60279.519    60875.313
+830  mtMet+F+I+R4  30017.523    107 60249.045    60259.290    60866.233
+851  mtVer+I+R3    31369.512    86  62911.024    62917.596    63407.081
+852  mtVer+I+R4    31350.333    88  62876.666    62883.552    63384.260
+873  mtVer+F+I+R3  30262.832    105 60735.664    60745.523    61341.316
+874  mtVer+F+I+R4  30248.431    107 60710.863    60721.107    61328.050
+895  mtInv+I+R3    31610.045    86  63392.089    63398.661    63888.147
+896  mtInv+I+R4    31594.688    88  63365.376    63372.262    63872.970
+917  mtInv+F+I+R3  30042.588    105 60295.175    60305.033    60900.827
+918  mtInv+F+I+R4  30032.603    107 60279.205    60289.450    60896.393
+939  mtMAM+I+R3    31791.615    86  63755.230    63761.802    64251.287
+940  mtMAM+I+R4    31762.248    88  63700.495    63707.380    64208.089
+961  mtMAM+F+I+R3  30583.441    105 61376.881    61386.740    61982.533
+962  mtMAM+F+I+R4  30562.377    107 61338.753    61348.998    61955.941
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+983  FLAVI+I+R3    30493.186    86  61158.373    61164.945    61654.430
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+984  FLAVI+I+R4    30474.056    88  61124.111    61130.996    61631.705
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1005  FLAVI+F+I+R3  30281.356    105 60772.712    60782.571    61378.364
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1006  FLAVI+F+I+R4  30263.196    107 60740.392    60750.636    61357.580
+1027  HIVb+I+R3     30303.312    86  60778.623    60785.195    61274.681
+1028  HIVb+I+R4     30287.276    88  60750.552    60757.437    61258.145
+1049  HIVb+F+I+R3   30092.463    105 60394.926    60404.785    61000.578
+1050  HIVb+F+I+R4   30076.154    107 60366.308    60376.553    60983.496
+1071  HIVw+I+R3     31209.208    86  62590.416    62596.988    63086.474
+1072  HIVw+I+R4     31189.798    88  62555.596    62562.481    63063.190
+1093  HIVw+F+I+R3   30647.386    105 61504.772    61514.631    62110.424
+1094  HIVw+F+I+R4   30632.100    107 61478.201    61488.446    62095.389
+1115  FLU+I+R3      30293.922    86  60759.843    60766.415    61255.901
+1116  FLU+I+R4      30282.134    88  60740.269    60747.154    61247.863
+1137  FLU+F+I+R3    30166.565    105 60543.130    60552.988    61148.781
+1138  FLU+F+I+R4    30155.200    107 60524.400    60534.645    61141.588
+1159  rtREV+I+R3    30419.608    86  61011.217    61017.789    61507.274
+1160  rtREV+I+R4    30411.132    88  60998.263    61005.149    61505.857
+1181  rtREV+F+I+R3  30237.030    105 60684.060    60693.919    61289.712
+1182  rtREV+F+I+R4  30228.796    107 60671.593    60681.838    61288.781
+1203  cpREV+I+R3    30339.020    86  60850.039    60856.611    61346.097
+1204  cpREV+I+R4    30334.106    88  60844.212    60851.097    61351.806
+1225  cpREV+F+I+R3  30253.307    105 60716.615    60726.473    61322.266
+1226  cpREV+F+I+R4  30247.644    107 60709.288    60719.532    61326.475
+Akaike Information Criterion:           Q.mammal+I+R4
+Corrected Akaike Information Criterion: Q.mammal+I+R4
+Bayesian Information Criterion:         Q.mammal+I+R4
+Best-fit model: Q.mammal+I+R4 chosen according to BIC
+
+All model information printed to /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.model.gz
+CPU time for ModelFinder: 878.241 seconds (0h:14m:38s)
+Wall-clock time for ModelFinder: 452.640 seconds (0h:7m:32s)
+Generating 1000 samples for ultrafast bootstrap (seed: 57351)...
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+
+NOTE: 51 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -29788.611
+2. Current log-likelihood: -29783.718
+3. Current log-likelihood: -29783.216
+4. Current log-likelihood: -29783.002
+5. Current log-likelihood: -29782.845
+6. Current log-likelihood: -29782.731
+Optimal log-likelihood: -29782.613
+Proportion of invariable sites: 0.050
+Site proportion and rates:  (0.359,0.193) (0.270,0.552) (0.196,1.310) (0.125,4.201)
+Parameters optimization took 6 rounds (7.414 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.150593 secs using 198.4% CPU
+Computing ML distances took 0.151421 sec (of wall-clock time) 0.299261 sec (of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Setting up auxiliary I and S matrices: done in 0.000122094 secs using 98.28% CPU
+Computing RapidNJ tree took 0.000546 sec (of wall-clock time) 0.000545 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -30057.058
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.761 second
+Computing log-likelihood of 98 initial trees ... 14.181 seconds
+Current best score: -29782.613
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -29782.056
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -29781.262
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -29780.842
+Iteration 10 / LogL: -29782.586 / Time: 0h:8m:35s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 14: -29779.389
+Iteration 20 / LogL: -29780.446 / Time: 0h:9m:9s
+Finish initializing candidate tree set (15)
+Current best tree score: -29779.389 / CPU time: 85.003
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 27: -29778.769
+Iteration 30 / LogL: -29818.712 / Time: 0h:9m:45s (0h:7m:25s left)
+Iteration 40 / LogL: -29779.784 / Time: 0h:10m:14s (0h:6m:1s left)
+Iteration 50 / LogL: -29839.394 / Time: 0h:10m:46s (0h:5m:4s left)
+Log-likelihood cutoff on original alignment: -29826.053
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -29778.589
+Iteration 60 / LogL: -29781.394 / Time: 0h:11m:23s (0h:4m:22s left)
+Iteration 70 / LogL: -29806.106 / Time: 0h:11m:53s (0h:3m:35s left)
+Iteration 80 / LogL: -29780.116 / Time: 0h:12m:23s (0h:2m:52s left)
+Iteration 90 / LogL: -29779.505 / Time: 0h:12m:56s (0h:2m:14s left)
+Iteration 100 / LogL: -29779.601 / Time: 0h:13m:22s (0h:1m:35s left)
+Log-likelihood cutoff on original alignment: -29812.383
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 110 / LogL: -29779.821 / Time: 0h:13m:51s (0h:5m:13s left)
+Iteration 120 / LogL: -29779.869 / Time: 0h:14m:21s (0h:4m:35s left)
+TREE SEARCH COMPLETED AFTER 128 ITERATIONS / Time: 0h:14m:45s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -29778.589
+2. Current log-likelihood: -29778.547
+3. Current log-likelihood: -29778.520
+4. Current log-likelihood: -29778.507
+Optimal log-likelihood: -29778.492
+Proportion of invariable sites: 0.050
+Site proportion and rates:  (0.336,0.187) (0.287,0.521) (0.200,1.310) (0.127,4.149)
+Parameters optimization took 4 rounds (4.851 sec)
+BEST SCORE FOUND : -29778.492
+Creating bootstrap support values...
+Split supports printed to NEXUS file /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.splits.nex
+Total tree length: 22.923
+
+Total number of iterations: 128
+CPU time used for tree search: 831.636 sec (0h:13m:51s)
+Wall-clock time used for tree search: 420.636 sec (0h:7m:0s)
+Total CPU time used: 1743.396 sec (0h:29m:3s)
+Total wall-clock time used: 890.421 sec (0h:14m:50s)
+
+Computing bootstrap consensus tree...
+Reading input file /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.splits.nex...
+42 taxa and 175 splits.
+Consensus tree written to /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.contree
+Reading input trees file /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.contree
+Log-likelihood of consensus tree: -29778.471
+
+Analysis results written to: 
+  IQ-TREE report:                /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.iqtree
+  Maximum-likelihood tree:       /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.treefile
+  Likelihood distances:          /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.splits.nex
+  Consensus tree:                /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.contree
+  Screen log file:               /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.log
+
+Date and Time: Thu Sep 26 14:06:16 2024

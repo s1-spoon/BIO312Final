@@ -1,0 +1,423 @@
+IQ-TREE 2.3.6 built Aug  1 2024
+
+Input file name: /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 57351
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 42 sequences with 2364 amino-acid sites
+Number of constant sites: 881 (= 37.2673% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 881 (= 37.2673% of all sites)
+Number of parsimony informative sites: 1081
+Number of distinct site patterns: 1702
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: Q.mammal+I+R4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+Q.mammal+I+R4    -29782.445   59740.891 +        1   59747.776 +        1   60248.484 +    0.991
+Q.mammal+I+R3    -29794.897   59761.795 - 2.89e-05   59768.367 - 3.38e-05   60257.852 -  0.00916
+JTT+I+R3         -29829.656   59831.311 - 2.32e-20   59837.883 - 2.71e-20   60327.369 - 7.35e-18
+JTT+I+R4         -29822.014   59820.027 - 6.54e-18   59826.913 - 6.54e-18   60327.621 - 6.48e-18
+JTTDCMut+I+R4    -29829.708   59835.416 - 2.98e-21   59842.302 - 2.98e-21   60343.010 - 2.95e-21
+JTTDCMut+I+R3    -29838.443   59848.886 - 3.54e-24   59855.458 - 4.14e-24   60344.943 - 1.12e-21
+Q.plant+I+R4     -29837.354   59850.709 - 1.42e-24   59857.594 - 1.42e-24   60358.302 - 1.41e-24
+Q.plant+I+R3     -29848.430   59868.861 - 1.63e-28   59875.433 -  1.9e-28   60364.918 - 5.16e-26
+Q.plant+F+I+R4   -29782.927   59779.853 - 3.46e-09   59790.098 - 6.45e-10   60397.041 - 5.46e-33
+Q.plant+F+I+R3   -29793.302   59796.604 - 7.98e-13   59806.462 -  1.8e-13   60402.256 - 4.03e-34
+JTT+F+I+R3       -29804.638   59819.277 - 9.52e-18   59829.135 - 2.15e-18   60424.929 -  4.8e-39
+JTT+F+I+R4       -29796.949   59807.898 - 2.82e-15   59818.142 - 5.25e-16   60425.085 - 4.44e-39
+Q.bird+I+R4      -29872.429   59920.859 - 8.33e-40   59927.744 - 8.33e-40   60428.452 - 8.25e-40
+Q.mammal+F+I+R4  -29799.330   59812.661 -  2.6e-16   59822.905 - 4.85e-17   60429.849 -  4.1e-40
+JTTDCMut+F+I+R4  -29802.049   59818.099 - 1.72e-17   59828.343 -  3.2e-18   60435.286 - 2.71e-41
+JTTDCMut+F+I+R3  -29810.652   59831.303 - 2.33e-20   59841.162 - 5.27e-21   60436.955 - 1.18e-41
+Q.bird+I+R3      -29886.162   59944.324 - 6.68e-45   59950.896 - 7.82e-45   60440.381 - 2.12e-42
+Q.mammal+F+I+R3  -29812.372   59834.744 - 4.17e-21   59844.602 - 9.43e-22   60440.396 -  2.1e-42
+Q.insect+F+I+R4  -29867.889   59949.778 - 4.37e-46   59960.022 - 8.15e-47   60566.965 -  6.9e-70
+Q.insect+F+I+R3  -29877.547   59965.094 - 2.07e-49   59974.952 - 4.67e-50   60570.745 - 1.04e-70
+Q.bird+F+I+R4    -29879.023   59972.046 - 6.39e-51   59982.290 - 1.19e-51   60589.233 - 1.01e-74
+Q.bird+F+I+R3    -29893.073   59996.146 - 3.73e-56   60006.005 - 8.44e-57   60601.798 - 1.88e-77
+Q.insect+I+R4    -30006.433   60188.866 - 5.29e-98   60195.751 - 5.29e-98   60696.460 - 5.24e-98
+Q.insect+I+R3    -30016.119   60204.238 - 2.43e-101   60210.810 - 2.84e-101   60700.296 -  7.7e-99
+Q.yeast+F+I+R4   -29976.628   60167.257 -  2.6e-93   60177.502 - 4.86e-94   60784.445 - 4.11e-117
+Q.yeast+F+I+R3   -29985.321   60180.642 - 3.23e-96   60190.500 -  7.3e-97   60786.294 - 1.63e-117
+mtMet+F+I+R4     -30017.523   60249.045 - 4.52e-111   60259.290 - 8.44e-112   60866.233 - 7.14e-135
+mtMet+F+I+R3     -30029.831   60269.661 - 1.51e-115   60279.519 - 3.41e-116   60875.313 - 7.62e-137
+mtInv+F+I+R4     -30032.603   60279.205 - 1.28e-117   60289.450 - 2.38e-118   60896.393 - 2.02e-141
+mtInv+F+I+R3     -30042.588   60295.175 - 4.35e-121   60305.033 - 9.84e-122   60900.827 - 2.2e-142
+Q.pfam+F+I+R4    -30063.640   60341.280 - 4.24e-131   60351.525 - 7.9e-132   60958.468 - 6.68e-155
+Q.pfam+F+I+R3    -30071.581   60353.161 - 1.11e-133   60363.019 - 2.52e-134   60958.813 - 5.63e-155
+Q.pfam+I+R3      -30149.920   60471.840 - 1.89e-159   60478.412 - 2.21e-159   60967.897 - 5.99e-157
+Q.pfam+I+R4      -30142.405   60460.810 - 4.69e-157   60467.695 - 4.69e-157   60968.403 - 4.65e-157
+LG+F+I+R3        -30081.243   60372.486 - 7.09e-138   60382.344 - 1.6e-138   60978.138 - 3.58e-159
+LG+F+I+R4        -30075.145   60364.289 - 4.27e-136   60374.534 - 7.97e-137   60981.477 - 6.74e-160
+HIVb+F+I+R4      -30076.154   60366.308 - 1.56e-136   60376.553 - 2.9e-137   60983.496 - 2.46e-160
+LG+I+R3          -30164.891   60501.783 - 5.95e-166   60508.355 - 6.96e-166   60997.840 - 1.89e-163
+HIVb+F+I+R3      -30092.463   60394.926 - 9.5e-143   60404.785 - 2.15e-143   61000.578 - 4.8e-164
+LG+I+R4          -30158.650   60493.301 - 4.13e-164   60500.186 - 4.13e-164   61000.895 - 4.09e-164
+VT+I+R3          -30168.513   60509.027 - 1.59e-167   60515.598 - 1.86e-167   61005.084 - 5.04e-165
+VT+I+R4          -30163.342   60502.685 - 3.79e-166   60509.570 - 3.79e-166   61010.279 - 3.75e-166
+Q.yeast+I+R4     -30168.218   60512.437 - 2.89e-168   60519.322 - 2.89e-168   61020.031 - 2.86e-168
+WAG+I+R3         -30176.045   60524.090 - 8.52e-171   60530.662 - 9.96e-171   61020.148 - 2.7e-168
+Q.yeast+I+R3     -30177.135   60526.271 - 2.86e-171   60532.843 - 3.35e-171   61022.328 - 9.08e-169
+WAG+I+R4         -30171.528   60519.056 - 1.06e-169   60525.942 - 1.06e-169   61026.650 - 1.05e-169
+LG+R5            -30179.664   60537.328 - 1.14e-173   60544.373 - 1.05e-173   61050.689 - 6.3e-175
+LG+R4            -30188.937   60551.874 - 7.89e-177   60558.601 - 8.54e-177   61053.700 - 1.4e-175
+LG+R6            -30174.036   60530.071 - 4.28e-172   60537.441 - 3.36e-172   61054.969 - 7.41e-176
+WAG+F+I+R3       -30131.433   60472.866 - 1.13e-159   60482.724 - 2.56e-160   61078.517 - 5.71e-181
+LG+I+G4          -30217.530   60601.060 - 1.65e-187   60607.175 - 2.42e-187   61079.813 - 2.99e-181
+WAG+F+I+R4       -30126.523   60467.046 - 2.08e-158   60477.291 - 3.87e-159   61084.234 - 3.28e-182
+LG+G4            -30224.344   60612.688 - 4.92e-190   60618.656 - 7.78e-190   61085.673 - 1.59e-182
+LG+R3            -30219.516   60609.032 - 3.06e-189   60615.449 - 3.86e-189   61099.321 - 1.73e-185
+VT+F+I+R3        -30146.113   60502.225 - 4.77e-166   60512.084 - 1.08e-166   61107.877 - 2.41e-187
+VT+F+I+R4        -30140.728   60495.455 - 1.41e-164   60505.700 - 2.62e-165   61112.643 - 2.22e-188
+Dayhoff+F+I+R3   -30157.778   60525.555 - 4.09e-171   60535.414 - 9.26e-172   61131.207 - 2.07e-192
+Dayhoff+F+I+R4   -30150.630   60515.260 - 7.04e-169   60525.505 - 1.31e-169   61132.448 - 1.11e-192
+DCMut+F+I+R3     -30159.098   60528.196 - 1.09e-171   60538.055 - 2.47e-172   61133.848 - 5.52e-193
+DCMut+F+I+R4     -30151.919   60517.838 - 1.94e-169   60528.083 - 3.62e-170   61135.026 - 3.06e-193
+FLU+F+I+R4       -30155.200   60524.400 - 7.3e-171   60534.645 - 1.36e-171   61141.588 - 1.15e-194
+FLU+F+I+R3       -30166.565   60543.130 - 6.25e-175   60552.988 - 1.41e-175   61148.781 - 3.15e-196
+LG+I+R2          -30282.564   60733.128 - 3.45e-216   60739.394 - 4.71e-216   61217.649 - 3.5e-211
+FLU+I+R4         -30282.134   60740.269 - 9.72e-218   60747.154 - 9.72e-218   61247.863 - 9.63e-218
+FLU+I+R3         -30293.922   60759.843 - 5.46e-222   60766.415 - 6.39e-222   61255.901 - 1.73e-219
+HIVb+I+R4        -30287.276   60750.552 - 5.69e-220   60757.437 - 5.69e-220   61258.145 - 5.63e-220
+Dayhoff+I+R4     -30292.335   60760.670 - 3.61e-222   60767.556 - 3.61e-222   61268.264 - 3.58e-222
+Dayhoff+I+R3     -30300.722   60773.444 - 6.08e-225   60780.016 - 7.11e-225   61269.502 - 1.93e-222
+DCMut+I+R4       -30293.920   60763.840 - 7.4e-223   60770.725 - 7.4e-223   61271.433 - 7.34e-223
+mtREV+F+I+R4     -30220.491   60654.982 - 3.22e-199   60665.226 -   6e-200   61272.170 - 5.08e-223
+DCMut+I+R3       -30302.308   60776.616 - 1.24e-225   60783.188 - 1.46e-225   61272.674 - 3.95e-223
+HIVb+I+R3        -30303.312   60778.623 - 4.56e-226   60785.195 - 5.34e-226   61274.681 - 1.45e-223
+mtREV+F+I+R3     -30229.880   60669.760 - 1.99e-202   60679.619 - 4.5e-203   61275.412 -   1e-223
+rtREV+F+I+R4     -30228.796   60671.593 - 7.95e-203   60681.838 - 1.48e-203   61288.781 - 1.25e-226
+rtREV+F+I+R3     -30237.030   60684.060 - 1.56e-205   60693.919 - 3.53e-206   61289.712 - 7.88e-227
+cpREV+F+I+R3     -30253.307   60716.615 - 1.33e-212   60726.473 - 3.01e-213   61322.266 - 6.72e-234
+cpREV+F+I+R4     -30247.644   60709.288 - 5.19e-211   60719.532 - 9.68e-212   61326.475 - 8.19e-235
+mtVer+F+I+R4     -30248.431   60710.863 - 2.36e-211   60721.107 - 4.4e-212   61328.050 - 3.73e-235
+mtZOA+F+I+R4     -30251.832   60717.663 - 7.88e-213   60727.908 - 1.47e-213   61334.851 - 1.24e-236
+mtZOA+F+I+R3     -30260.794   60731.588 - 7.46e-216   60741.446 - 1.69e-216   61337.240 - 3.76e-237
+mtVer+F+I+R3     -30262.832   60735.664 - 9.72e-217   60745.523 - 2.2e-217   61341.316 - 4.9e-238
+cpREV+I+R3       -30339.020   60850.039 - 1.42e-241   60856.611 - 1.66e-241   61346.097 - 4.49e-239
+cpREV+I+R4       -30334.106   60844.212 - 2.61e-240   60851.097 - 2.61e-240   61351.806 - 2.59e-240
+FLAVI+F+I+R4     -30263.196   60740.392 - 9.14e-218   60750.636 - 1.7e-218   61357.580 - 1.44e-241
+FLAVI+F+I+R3     -30281.356   60772.712 - 8.77e-225   60782.571 - 1.98e-225   61378.364 - 4.42e-246
+LG+R2            -30376.111   60918.221 - 2.22e-256   60924.337 - 3.26e-256   61396.974 - 4.02e-250
+rtREV+I+R4       -30411.132   60998.263 - 9.23e-274   61005.149 - 9.23e-274   61505.857 - 9.14e-274
+rtREV+I+R3       -30419.608   61011.217 - 1.42e-276   61017.789 - 1.66e-276   61507.274 - 4.5e-274
+FLAVI+I+R4       -30474.056   61124.111 - 4.34e-301   61130.996 - 4.34e-301   61631.705 - 4.3e-301
+FLAVI+I+R3       -30493.186   61158.373 - 1.58e-308   61164.945 - 1.84e-308   61654.430 -   5e-306
+PMB+I+R3         -30538.359   61248.718 -        0   61255.290 -        0   61744.776 -        0
+PMB+I+R4         -30533.515   61243.030 -        0   61249.916 -        0   61750.624 -        0
+PMB+F+I+R3       -30493.543   61197.087 - 6.18e-317   61206.945 - 1.4e-317   61802.738 -        0
+PMB+F+I+R4       -30488.654   61191.307 - 1.11e-315   61201.552 - 2.07e-316   61808.495 -        0
+Blosum62+F+I+R3  -30518.677   61247.354 -        0   61257.213 -        0   61853.006 -        0
+Blosum62+F+I+R4  -30512.186   61238.372 -        0   61248.617 -        0   61855.560 -        0
+Blosum62+I+R3    -30614.310   61400.621 -        0   61407.192 -        0   61896.678 -        0
+Blosum62+I+R4    -30607.970   61391.941 -        0   61398.826 -        0   61899.534 -        0
+mtMAM+F+I+R4     -30562.377   61338.753 -        0   61348.998 -        0   61955.941 -        0
+mtMAM+F+I+R3     -30583.441   61376.881 -        0   61386.740 -        0   61982.533 -        0
+mtART+F+I+R4     -30625.235   61464.470 -        0   61474.714 -        0   62081.658 -        0
+mtART+F+I+R3     -30637.285   61484.571 -        0   61494.429 -        0   62090.222 -        0
+HIVw+F+I+R4      -30632.100   61478.201 -        0   61488.446 -        0   62095.389 -        0
+HIVw+F+I+R3      -30647.386   61504.772 -        0   61514.631 -        0   62110.424 -        0
+LG+I             -30824.010   61812.020 -        0   61817.988 -        0   62285.005 -        0
+LG               -31046.557   62255.114 -        0   62260.935 -        0   62722.331 -        0
+mtZOA+I+R4       -31150.266   62476.531 -        0   62483.417 -        0   62984.125 -        0
+mtZOA+I+R3       -31162.295   62496.589 -        0   62503.161 -        0   62992.647 -        0
+HIVw+I+R4        -31189.798   62555.596 -        0   62562.481 -        0   63063.190 -        0
+HIVw+I+R3        -31209.208   62590.416 -        0   62596.988 -        0   63086.474 -        0
+mtMet+I+R4       -31220.110   62616.220 -        0   62623.105 -        0   63123.814 -        0
+mtMet+I+R3       -31235.796   62643.591 -        0   62650.163 -        0   63139.649 -        0
+mtREV+I+R4       -31296.164   62768.328 -        0   62775.214 -        0   63275.922 -        0
+mtREV+I+R3       -31307.584   62787.169 -        0   62793.741 -        0   63283.226 -        0
+mtVer+I+R4       -31350.333   62876.666 -        0   62883.552 -        0   63384.260 -        0
+mtVer+I+R3       -31369.512   62911.024 -        0   62917.596 -        0   63407.081 -        0
+mtInv+I+R4       -31594.688   63365.376 -        0   63372.262 -        0   63872.970 -        0
+mtInv+I+R3       -31610.045   63392.089 -        0   63398.661 -        0   63888.147 -        0
+mtMAM+I+R4       -31762.248   63700.495 -        0   63707.380 -        0   64208.089 -        0
+mtMAM+I+R3       -31791.615   63755.230 -        0   63761.802 -        0   64251.287 -        0
+mtART+I+R4       -31818.655   63813.310 -        0   63820.195 -        0   64320.904 -        0
+mtART+I+R3       -31836.315   63844.630 -        0   63851.202 -        0   64340.687 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: Q.mammal+I+R4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Invar+FreeRate with 4 categories
+Proportion of invariable sites: 0.0495
+Site proportion and rates:  (0.3365,0.1873) (0.2873,0.5205) (0.2001,1.3097) (0.1266,4.1492)
+
+ Category  Relative_rate  Proportion
+  0         0              0.0495
+  1         0.1873         0.3365
+  2         0.5205         0.2873
+  3         1.3097         0.2001
+  4         4.1492         0.1266
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -29778.4917 (s.e. 550.6513)
+Unconstrained log-likelihood (without tree): -16467.6049
+Number of free parameters (#branches + #model parameters): 88
+Akaike information criterion (AIC) score: 59732.9835
+Corrected Akaike information criterion (AICc) score: 59739.8687
+Bayesian information criterion (BIC) score: 60240.5772
+
+Total tree length (sum of branch lengths): 22.9227
+Sum of internal branch lengths: 18.3356 (79.9887% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'D.rerio_fig4b_polyphosphoinositide_phosphatase' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--D.rerio_fig4b_polyphosphoinositide_phosphatase
+|
+|     +--D.rerio_fig4a_polyphosphoinositide_phosphatase_isoform_X1
+|  +--| (96)
+|  |  |           +--E.caballus_FIG4_polyphosphoinositide_phosphatase
+|  |  |        +--| (100)
+|  |  |        |  |  +**F.catus_FIG4_polyphosphoinositide_phosphatase_isoform_X1
+|  |  |        |  +--| (94)
+|  |  |        |     +--H.sapiens_FIG4_polyphosphoinositide_phosphatase
+|  |  |     +--| (68)
+|  |  |     |  |     +--C.mydas_FIG4_polyphosphoinositide_phosphatase_isoform_X1
+|  |  |     |  |  +--| (62)
+|  |  |     |  |  |  |  +--G.gallus_FIG4_polyphosphoinositide_phosphatase
+|  |  |     |  |  |  +--| (65)
+|  |  |     |  |  |     |                                                           +--S.townsendi_SYNJ1_LOW_QUALITY_PROTEIN_synaptojanin1
+|  |  |     |  |  |     |                                                        +--| (95)
+|  |  |     |  |  |     |                                                        |  +--C.mydas_SYNJ1_synaptojanin1_isoform_X1
+|  |  |     |  |  |     |                                                     +--| (66)
+|  |  |     |  |  |     |                                                     |  |     +--F.catus_SYNJ1_synaptojanin1_isoform_X1
+|  |  |     |  |  |     |                                                     |  |  +--| (76)
+|  |  |     |  |  |     |                                                     |  |  |  +--H.sapiens_SYNJ1_synaptojanin1_isoform_X8
+|  |  |     |  |  |     |                                                     |  +--| (91)
+|  |  |     |  |  |     |                                                     |     +--E.caballus_SYNJ1_synaptojanin1_isoform_X8
+|  |  |     |  |  |     |                            +------------------------| (100)
+|  |  |     |  |  |     |                            |                        +--G.gallus_SYNJ1_synaptojanin1_isoform_X8
+|  |  |     |  |  |     +----------------------------| (100)
+|  |  |     |  |  |                                  |                       +--G.aculeatus_sacm1la_phosphatidylinositol3phosphatase_SAC1A_isofor
+|  |  |     |  |  |                                  |                    +--| (100)
+|  |  |     |  |  |                                  |                    |  |  +--S.salar_sacm1la_phosphatidylinositol3phosphatase_SAC1A
+|  |  |     |  |  |                                  |                    |  +--| (100)
+|  |  |     |  |  |                                  |                    |     +--S.salar_LOC106570660_phosphatidylinositol3phosphatase_SAC1A
+|  |  |     |  |  |                                  |                 +--| (100)
+|  |  |     |  |  |                                  |                 |  +--D.rerio_sacm1la_phosphatidylinositide_phosphatase_SAC1B
+|  |  |     |  |  |                                  |              +--| (100)
+|  |  |     |  |  |                                  |              |  |     +--D.rerio_sacm1lb_phosphatidylinositide_phosphatase_SAC1A
+|  |  |     |  |  |                                  |              |  |  +--| (76)
+|  |  |     |  |  |                                  |              |  |  |  |  +--S.salar_LOC106605518_phosphatidylinositol3phosphatase_SAC1Blike
+|  |  |     |  |  |                                  |              |  |  |  +--| (100)
+|  |  |     |  |  |                                  |              |  |  |     +**S.salar_LOC106579366_phosphatidylinositol3phosphatase_SAC1B
+|  |  |     |  |  |                                  |              |  +--| (96)
+|  |  |     |  |  |                                  |              |     +--G.aculeatus_LOC120810060_phosphatidylinositol3phosphatase_SAC1B
+|  |  |     |  |  |                                  |           +--| (55)
+|  |  |     |  |  |                                  |           |  +--C.carcharias_LOC121276208_phosphatidylinositol3phosphatase_SAC1li
+|  |  |     |  |  |                                  |  +--------| (100)
+|  |  |     |  |  |                                  |  |        |        +--S.townsendi_SACM1L_phosphatidylinositol3phosphatase_SAC1
+|  |  |     |  |  |                                  |  |        |     +--| (85)
+|  |  |     |  |  |                                  |  |        |     |  |  +--C.mydas_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1
+|  |  |     |  |  |                                  |  |        |     |  +--| (60)
+|  |  |     |  |  |                                  |  |        |     |     +--G.gallus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x
+|  |  |     |  |  |                                  |  |        |  +--| (74)
+|  |  |     |  |  |                                  |  |        |  |  |     +--F.catus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1
+|  |  |     |  |  |                                  |  |        |  |  |  +--| (99)
+|  |  |     |  |  |                                  |  |        |  |  |  |  +--E.caballus_SACM1L_phosphatidylinositide_phosphatase_SAC1_isoform_
+|  |  |     |  |  |                                  |  |        |  |  +--| (99)
+|  |  |     |  |  |                                  |  |        |  |     +--H.sapiens_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x
+|  |  |     |  |  |                                  |  |        +--| (67)
+|  |  |     |  |  |                                  |  |           +--X.laevis_sacm1l.L_phosphatidylinositol3phosphatase_SAC1_isoform_1
+|  |  |     |  |  |                                  +--| (49)
+|  |  |     |  |  |                                     |                         +--C.mydas_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2
+|  |  |     |  |  |                                     |                      +--| (99)
+|  |  |     |  |  |                                     |                      |  +--G.gallus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2
+|  |  |     |  |  |                                     |                   +--| (100)
+|  |  |     |  |  |                                     |                   |  |  +--F.catus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X1
+|  |  |     |  |  |                                     |                   |  +--| (100)
+|  |  |     |  |  |                                     |                   |     +--H.sapiens_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_1
+|  |  |     |  |  |                                     |                +--| (91)
+|  |  |     |  |  |                                     |                |  +--D.rerio_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform_X1
+|  |  |     |  |  |                                     |             +--| (75)
+|  |  |     |  |  |                                     |             |  +--G.aculeatus_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform
+|  |  |     |  |  |                                     +-------------| (100)
+|  |  |     |  |  |                                                   |  +--S.salar_inpp5f_phosphatidylinositide_phosphatase_SAC2
+|  |  |     |  |  |                                                   +--| (93)
+|  |  |     |  |  |                                                      +--S.salar_LOC106604534_phosphatidylinositide_phosphatase_SAC2like_i
+|  |  |     |  +--| (67)
+|  |  |     |     +--S.townsendi_FIG4_polyphosphoinositide_phosphatase
+|  |  |  +--| (77)
+|  |  |  |  +--X.laevis_fig4.L_polyphosphoinositide_phosphatase_isoform_X2
+|  |  +--| (95)
+|  |     +--C.carcharias_fig4a_polyphosphoinositide_phosphatase_isoform_X1
++--| (92)
+|  +--G.aculeatus_fig4a_polyphosphoinositide_phosphatase_isoform_X1
+|
++--S.salar_fig4a_polyphosphoinositide_phosphatase
+
+Tree in newick format:
+
+(D.rerio_fig4b_polyphosphoinositide_phosphatase:0.5150590697,((D.rerio_fig4a_polyphosphoinositide_phosphatase_isoform_X1:0.2552492949,((((E.caballus_FIG4_polyphosphoinositide_phosphatase:0.0218912791,(F.catus_FIG4_polyphosphoinositide_phosphatase_isoform_X1:0.0000025371,H.sapiens_FIG4_polyphosphoinositide_phosphatase:0.0303984276)94:0.0049039582)100:0.0777668956,((C.mydas_FIG4_polyphosphoinositide_phosphatase_isoform_X1:0.0530015964,(G.gallus_FIG4_polyphosphoinositide_phosphatase:0.0095864896,((((S.townsendi_SYNJ1_LOW_QUALITY_PROTEIN_synaptojanin1:0.2416766438,C.mydas_SYNJ1_synaptojanin1_isoform_X1:0.0669586973)95:0.0266181363,((F.catus_SYNJ1_synaptojanin1_isoform_X1:0.0378488023,H.sapiens_SYNJ1_synaptojanin1_isoform_X8:0.0549859431)76:0.0077996223,E.caballus_SYNJ1_synaptojanin1_isoform_X8:0.0307356383)91:0.1861548984)66:0.0689676391,G.gallus_SYNJ1_synaptojanin1_isoform_X8:0.0325699100)100:4.8676458160,((((((G.aculeatus_sacm1la_phosphatidylinositol3phosphatase_SAC1A_isofor:0.2889696854,(S.salar_sacm1la_phosphatidylinositol3phosphatase_SAC1A:0.0410545345,S.salar_LOC106570660_phosphatidylinositol3phosphatase_SAC1A:0.0423207693)100:0.0916301061)100:0.1021333934,D.rerio_sacm1la_phosphatidylinositide_phosphatase_SAC1B:0.1930617420)100:0.1121889452,((D.rerio_sacm1lb_phosphatidylinositide_phosphatase_SAC1A:0.1378338254,(S.salar_LOC106605518_phosphatidylinositol3phosphatase_SAC1Blike:0.0070466886,S.salar_LOC106579366_phosphatidylinositol3phosphatase_SAC1B:0.0000027028)100:0.1329488578)76:0.0257295410,G.aculeatus_LOC120810060_phosphatidylinositol3phosphatase_SAC1B:0.2546437537)96:0.0410706690)100:0.1365540315,C.carcharias_LOC121276208_phosphatidylinositol3phosphatase_SAC1li:0.2716548082)55:0.0345710976,(((S.townsendi_SACM1L_phosphatidylinositol3phosphatase_SAC1:0.1162779366,(C.mydas_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1:0.0611012894,G.gallus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x:0.0852222378)60:0.0246785641)85:0.0465906441,((F.catus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1:0.0447208470,E.caballus_SACM1L_phosphatidylinositide_phosphatase_SAC1_isoform_:0.0245355662)99:0.0409081667,H.sapiens_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x:0.0365951062)99:0.2080848776)74:0.0388379425,X.laevis_sacm1l.L_phosphatidylinositol3phosphatase_SAC1_isoform_1:0.2286514112)67:0.0634750848)100:1.8208010160,(((((C.mydas_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2:0.0729272104,G.gallus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2:0.0968853796)99:0.0482249353,(F.catus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X1:0.0386597695,H.sapiens_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_1:0.0478892721)100:0.1152734876)100:0.3616679427,D.rerio_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform_X1:0.1166790548)91:0.0608234869,G.aculeatus_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform:0.1564457417)75:0.0324568339,(S.salar_inpp5f_phosphatidylinositide_phosphatase_SAC2:0.0367376052,S.salar_LOC106604534_phosphatidylinositide_phosphatase_SAC2like_i:0.0616011564)93:0.0814286037)100:2.7619564640)49:0.3662679198)100:5.7686828990)65:0.0544140945)62:0.0141233930,S.townsendi_FIG4_polyphosphoinositide_phosphatase:0.0857692690)67:0.0194650429)68:0.0490994417,X.laevis_fig4.L_polyphosphoinositide_phosphatase_isoform_X2:0.1761871942)77:0.1338627599,C.carcharias_fig4a_polyphosphoinositide_phosphatase_isoform_X1:0.2804381949)95:0.1983288076)96:0.0685617488,G.aculeatus_fig4a_polyphosphoinositide_phosphatase_isoform_X1:0.1647163253)92:0.0409205981,S.salar_fig4a_polyphosphoinositide_phosphatase:0.0685348645);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -29778.471000
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--D.rerio_fig4b_polyphosphoinositide_phosphatase
+|
+|     +--D.rerio_fig4a_polyphosphoinositide_phosphatase_isoform_X1
+|  +--| (96)
+|  |  |           +--E.caballus_FIG4_polyphosphoinositide_phosphatase
+|  |  |        +--| (100)
+|  |  |        |  |  +--F.catus_FIG4_polyphosphoinositide_phosphatase_isoform_X1
+|  |  |        |  +--| (94)
+|  |  |        |     +--H.sapiens_FIG4_polyphosphoinositide_phosphatase
+|  |  |     +--| (68)
+|  |  |     |  |     +--C.mydas_FIG4_polyphosphoinositide_phosphatase_isoform_X1
+|  |  |     |  |  +--| (62)
+|  |  |     |  |  |  |  +--G.gallus_FIG4_polyphosphoinositide_phosphatase
+|  |  |     |  |  |  +--| (65)
+|  |  |     |  |  |     |                                                            +--S.townsendi_SYNJ1_LOW_QUALITY_PROTEIN_synaptojanin1
+|  |  |     |  |  |     |                                                         +--| (95)
+|  |  |     |  |  |     |                                                         |  +--C.mydas_SYNJ1_synaptojanin1_isoform_X1
+|  |  |     |  |  |     |                                                      +--| (66)
+|  |  |     |  |  |     |                                                      |  |     +--F.catus_SYNJ1_synaptojanin1_isoform_X1
+|  |  |     |  |  |     |                                                      |  |  +--| (76)
+|  |  |     |  |  |     |                                                      |  |  |  +--H.sapiens_SYNJ1_synaptojanin1_isoform_X8
+|  |  |     |  |  |     |                                                      |  +--| (91)
+|  |  |     |  |  |     |                                                      |     +--E.caballus_SYNJ1_synaptojanin1_isoform_X8
+|  |  |     |  |  |     |                             +------------------------| (100)
+|  |  |     |  |  |     |                             |                        +--G.gallus_SYNJ1_synaptojanin1_isoform_X8
+|  |  |     |  |  |     +-----------------------------| (100)
+|  |  |     |  |  |                                   |                       +--G.aculeatus_sacm1la_phosphatidylinositol3phosphatase_SAC1A_isofor
+|  |  |     |  |  |                                   |                    +--| (100)
+|  |  |     |  |  |                                   |                    |  |  +--S.salar_sacm1la_phosphatidylinositol3phosphatase_SAC1A
+|  |  |     |  |  |                                   |                    |  +--| (100)
+|  |  |     |  |  |                                   |                    |     +--S.salar_LOC106570660_phosphatidylinositol3phosphatase_SAC1A
+|  |  |     |  |  |                                   |                 +--| (100)
+|  |  |     |  |  |                                   |                 |  +--D.rerio_sacm1la_phosphatidylinositide_phosphatase_SAC1B
+|  |  |     |  |  |                                   |              +--| (100)
+|  |  |     |  |  |                                   |              |  |     +--D.rerio_sacm1lb_phosphatidylinositide_phosphatase_SAC1A
+|  |  |     |  |  |                                   |              |  |  +--| (76)
+|  |  |     |  |  |                                   |              |  |  |  |  +--S.salar_LOC106605518_phosphatidylinositol3phosphatase_SAC1Blike
+|  |  |     |  |  |                                   |              |  |  |  +--| (100)
+|  |  |     |  |  |                                   |              |  |  |     +--S.salar_LOC106579366_phosphatidylinositol3phosphatase_SAC1B
+|  |  |     |  |  |                                   |              |  +--| (96)
+|  |  |     |  |  |                                   |              |     +--G.aculeatus_LOC120810060_phosphatidylinositol3phosphatase_SAC1B
+|  |  |     |  |  |                                   |           +--| (55)
+|  |  |     |  |  |                                   |           |  +--C.carcharias_LOC121276208_phosphatidylinositol3phosphatase_SAC1li
+|  |  |     |  |  |                                   |  +--------| (100)
+|  |  |     |  |  |                                   |  |        |        +--S.townsendi_SACM1L_phosphatidylinositol3phosphatase_SAC1
+|  |  |     |  |  |                                   |  |        |     +--| (85)
+|  |  |     |  |  |                                   |  |        |     |  |  +--C.mydas_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1
+|  |  |     |  |  |                                   |  |        |     |  +--| (60)
+|  |  |     |  |  |                                   |  |        |     |     +--G.gallus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x
+|  |  |     |  |  |                                   |  |        |  +--| (74)
+|  |  |     |  |  |                                   |  |        |  |  |     +--F.catus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1
+|  |  |     |  |  |                                   |  |        |  |  |  +--| (99)
+|  |  |     |  |  |                                   |  |        |  |  |  |  +--E.caballus_SACM1L_phosphatidylinositide_phosphatase_SAC1_isoform_
+|  |  |     |  |  |                                   |  |        |  |  +--| (99)
+|  |  |     |  |  |                                   |  |        |  |     +--H.sapiens_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x
+|  |  |     |  |  |                                   |  |        +--| (67)
+|  |  |     |  |  |                                   |  |           +--X.laevis_sacm1l.L_phosphatidylinositol3phosphatase_SAC1_isoform_1
+|  |  |     |  |  |                                   +--| (49)
+|  |  |     |  |  |                                      |                         +--C.mydas_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2
+|  |  |     |  |  |                                      |                      +--| (99)
+|  |  |     |  |  |                                      |                      |  +--G.gallus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2
+|  |  |     |  |  |                                      |                   +--| (100)
+|  |  |     |  |  |                                      |                   |  |  +--F.catus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X1
+|  |  |     |  |  |                                      |                   |  +--| (100)
+|  |  |     |  |  |                                      |                   |     +--H.sapiens_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_1
+|  |  |     |  |  |                                      |                +--| (91)
+|  |  |     |  |  |                                      |                |  +--D.rerio_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform_X1
+|  |  |     |  |  |                                      |             +--| (75)
+|  |  |     |  |  |                                      |             |  +--G.aculeatus_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform
+|  |  |     |  |  |                                      +-------------| (100)
+|  |  |     |  |  |                                                    |  +--S.salar_inpp5f_phosphatidylinositide_phosphatase_SAC2
+|  |  |     |  |  |                                                    +--| (93)
+|  |  |     |  |  |                                                       +--S.salar_LOC106604534_phosphatidylinositide_phosphatase_SAC2like_i
+|  |  |     |  +--| (67)
+|  |  |     |     +--S.townsendi_FIG4_polyphosphoinositide_phosphatase
+|  |  |  +--| (77)
+|  |  |  |  +--X.laevis_fig4.L_polyphosphoinositide_phosphatase_isoform_X2
+|  |  +--| (95)
+|  |     +--C.carcharias_fig4a_polyphosphoinositide_phosphatase_isoform_X1
++--| (92)
+|  +--G.aculeatus_fig4a_polyphosphoinositide_phosphatase_isoform_X1
+|
++--S.salar_fig4a_polyphosphoinositide_phosphatase
+
+
+Consensus tree in newick format: 
+
+(D.rerio_fig4b_polyphosphoinositide_phosphatase:0.5146274609,((D.rerio_fig4a_polyphosphoinositide_phosphatase_isoform_X1:0.2551641499,((((E.caballus_FIG4_polyphosphoinositide_phosphatase:0.0218759080,(F.catus_FIG4_polyphosphoinositide_phosphatase_isoform_X1:0.0000020254,H.sapiens_FIG4_polyphosphoinositide_phosphatase:0.0303759569)94:0.0049002789)100:0.0777046686,((C.mydas_FIG4_polyphosphoinositide_phosphatase_isoform_X1:0.0529402512,(G.gallus_FIG4_polyphosphoinositide_phosphatase:0.0237992694,((((S.townsendi_SYNJ1_LOW_QUALITY_PROTEIN_synaptojanin1:0.2415078409,C.mydas_SYNJ1_synaptojanin1_isoform_X1:0.0669290613)95:0.0265997304,((F.catus_SYNJ1_synaptojanin1_isoform_X1:0.0378330236,H.sapiens_SYNJ1_synaptojanin1_isoform_X8:0.0549630608)76:0.0077975552,E.caballus_SYNJ1_synaptojanin1_isoform_X8:0.0307278819)91:0.1860443991)66:0.0638027104,G.gallus_SYNJ1_synaptojanin1_isoform_X8:0.0377289793)100:4.8631582872,((((((G.aculeatus_sacm1la_phosphatidylinositol3phosphatase_SAC1A_isofor:0.2884932964,(S.salar_sacm1la_phosphatidylinositol3phosphatase_SAC1A:0.0409895026,S.salar_LOC106570660_phosphatidylinositol3phosphatase_SAC1A:0.0422460967)100:0.0914982337)100:0.1019807559,D.rerio_sacm1la_phosphatidylinositide_phosphatase_SAC1B:0.1927606879)100:0.1120086803,((D.rerio_sacm1lb_phosphatidylinositide_phosphatase_SAC1A:0.1376299496,(S.salar_LOC106605518_phosphatidylinositol3phosphatase_SAC1Blike:0.0070358405,S.salar_LOC106579366_phosphatidylinositol3phosphatase_SAC1B:0.0000026492)100:0.1327343001)76:0.0256947421,G.aculeatus_LOC120810060_phosphatidylinositol3phosphatase_SAC1B:0.2542490241)96:0.0410387447)100:0.1363917433,C.carcharias_LOC121276208_phosphatidylinositol3phosphatase_SAC1li:0.2712430384)55:0.0341316802,(((S.townsendi_SACM1L_phosphatidylinositol3phosphatase_SAC1:0.1161247769,(C.mydas_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1:0.0610201026,G.gallus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x:0.0851061597)60:0.0246407216)85:0.0465391222,((F.catus_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_X1:0.0446614586,E.caballus_SACM1L_phosphatidylinositide_phosphatase_SAC1_isoform_:0.0245013849)99:0.0408465206,H.sapiens_SACM1L_phosphatidylinositol3phosphatase_SAC1_isoform_1x:0.0365626685)99:0.2077987433)74:0.0387865004,X.laevis_sacm1l.L_phosphatidylinositol3phosphatase_SAC1_isoform_1:0.2283335511)67:0.0638042719)100:1.8189221402,(((((C.mydas_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2:0.0728730898,G.gallus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X2:0.0967891995)99:0.0482160899,(F.catus_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_X1:0.0386344166,H.sapiens_INPP5F_phosphatidylinositide_phosphatase_SAC2_isoform_1:0.0478462217)100:0.1151492227)100:0.3612584635,D.rerio_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform_X1:0.1165398360)91:0.0608103922,G.aculeatus_inpp5f_phosphatidylinositide_phosphatase_SAC2_isoform:0.1562816771)75:0.0338827376,(S.salar_inpp5f_phosphatidylinositide_phosphatase_SAC2:0.0367041712,S.salar_LOC106604534_phosphatidylinositide_phosphatase_SAC2like_i:0.0615291125)93:0.0796975191)100:2.7591944637)49:0.3690599104)100:5.7626430884)65:0.0403509480)62:0.0141210591,S.townsendi_FIG4_polyphosphoinositide_phosphatase:0.0856775979)67:0.0194642203)68:0.0490982760,X.laevis_fig4.L_polyphosphoinositide_phosphatase_isoform_X2:0.1760516061)77:0.1338254325,C.carcharias_fig4a_polyphosphoinositide_phosphatase_isoform_X1:0.2802643724)95:0.1982150064)96:0.0685020424,G.aculeatus_fig4a_polyphosphoinositide_phosphatase_isoform_X1:0.1646329158)92:0.0409589049,S.salar_fig4a_polyphosphoinositide_phosphatase:0.0684704246);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas.treefile -m "Q.mammal+I{0.0495022}+R4{0.336488,0.187271,0.287331,0.520544,0.20005,1.30972,0.126628,4.1492}" --length 2364
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /home/bio312-user/lab05-s1-spoon/FIG/FIG.homologsf.al.fas --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Thu Sep 26 14:06:16 2024
+Total CPU time used: 1743.395796 seconds (0h:29m:3s)
+Total wall-clock time used: 893.9567634 seconds (0h:14m:53s)
+

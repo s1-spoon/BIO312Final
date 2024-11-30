@@ -1,21 +1,3 @@
-    1  cd ~/lab02-$MYGIT
-    2  ncbi-acc-download -h
-    3  ncbi-acc-download -F genbank "NW_003143794.1"
-    4  ls
-    5  less
-    6  less NW_003143794.1.gbk
-    7  ncbi-acc-download -F fasta "NW_003143794.1"
-    8  more NW_003143794.1
-    9  more NW_003143794.1.fa
-   10  less NW_003143794.1.FA
-   11  less NW_003143794.1.fa
-   12  cat NW_003143794.1.fa
-   13  q
-   14  ncbi-acc-download -F gff3 "NW_003143794.1"
-   15  filterGFF LOC100375093 NW_003143794.1.gff
-   16  gt gff3 -sort -tidy -force -o LOC100375093.sorted.gff LOC100375093.X1.gff
-   17  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri -addintrons -force -o LOC100375093.sorted.counts.gff LOC100375093.sorted.gff
-   18  less LOC100375093.sorted.counts.gff
    19  gt gff3 -sort -tidy -o NW_003143794.1.sorted.gff NW_003143794.1.gff
    20  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri -addintrons -force -o NW_003143794.1.counts.txt NW_003143794.1.sorted.gff
    21  less NW_003143794.1.counts.txt
@@ -997,3 +979,22 @@
   997  cp -r ~/lab04-$MYGIT/FIG ~/bio312final/FIG
   998  cd ~/bio312final
   999  history > bio312final.commandhistory.txt 
+ 1000  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+ 1001  git add .
+ 1002  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+ 1003  git pull --no-edit
+ 1004  git push 
+ 1005  echo "((((((F.catus,E.caballus)Laurasiatheria,H.sapiens)Boreoeutheria,(S.townsendi,(C.mydas,G.gallus)Archelosauria)Sauria)Amniota,X.laevis)Tetrapoda,(D.rerio,(S.salar,G.aculeatus)Euteleosteomorpha)Clupeocephala)Euteleostomi,C.carcharias)Gnathostomata;"  > ~/lab05-$MYGIT/species.tre
+ 1006  nw_display ~/lab05-$MYGIT/species.tre
+ 1007  nw_displace --version
+ 1008  nw_display -version
+ 1009  Newick Utilities --version
+ 1010  echo --version
+ 1011  nw_display -v
+ 1012  nw_display --v
+ 1013  newick utilities --version
+ 1014  cp -r ~/lab05-$MYGIT/FIG ~/bio312final/FIG
+ 1015  iqtree -s ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas -bb 1000 -nt 2 
+ 1016  iqtree --version
+ 1017  cd ~/bio312final
+ 1018  history > bio312final.commandhistory.txt 
