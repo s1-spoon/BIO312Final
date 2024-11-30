@@ -10,6 +10,8 @@ cp -r ~/lab04-$MYGIT/FIG ~/bio312final/FIG
 
 cp -r ~/lab05-$MYGIT/FIG ~/bio312final/FIG
 
+cp -r ~/lab05-$MYGIT/species.tre.pdf ~/bio312final/FIG
+
 cp -r ~/lab06-$MYGIT/FIG ~/bio312final/FIG
 ```
 
@@ -191,7 +193,9 @@ To find the rate heterogeneity multiplier to estimate the tree, I used the follo
 ```
 less ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.iqtree
 ```
-## RESULT: Model of rate heterogeneity: Invar+FreeRate with 4 categories 
+## RESULT: Model of substitution: Q.mammal+I+R4
+State frequencies: (model)
+Model of rate heterogeneity: Invar+FreeRate with 4 categories
 
 I used gotree to construct a midpoint rooted gene tree. The unrooted gene tree to constructed into a midpoint rooted tree using the code below.
 ## Gotree Version: v0.4.5

@@ -1,11 +1,3 @@
-    8  git add .git status
-    9  history > lab2.commandhistory.txt
-   10  get status
-   11  git status
-   12  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore
-   13  awk '!NF || !seen[$0]++' .gitignore
-   14  git add
-   15  git add .
    16  git status
    17  git commit -a -m "Adding all new data files I generated in AWS to the repository."
    18  git config --global user.email "sara.poon@stonybrook.edu"  git config --global user.name "s1-spoon"
@@ -998,3 +990,11 @@
  1005  git push
  1006  cd ~/bio312final
  1007  history > bio312final.commandhistory.txt 
+ 1008  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+ 1009  git add .
+ 1010  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+ 1011  git pull --no-edit
+ 1012  git push 
+ 1013  cp -r ~/lab05-$MYGIT/species.tre.pdf ~/bio312final/FIG
+ 1014  cd ~/bio312final
+ 1015  history > bio312final.commandhistory.txt 
