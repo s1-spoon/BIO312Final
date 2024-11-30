@@ -9,6 +9,8 @@ cp -r ~/lab03-$MYGIT/FIG ~/bio312final/FIG
 cp -r ~/lab04-$MYGIT/FIG ~/bio312final/FIG
 
 cp -r ~/lab05-$MYGIT/FIG ~/bio312final/FIG
+
+cp -r ~/lab06-$MYGIT/FIG ~/bio312final/FIG
 ```
 
 ## Introduction 
@@ -19,7 +21,8 @@ Below is the table of contents.
 3. Alignment to Query Sequence
 4. Constructing Species Tree
 5. Constructing Gene Tree with Best Alignment
-6. Reconciling Gene Tree within Speces Tree
+6. Reconciling Gene Tree and Species Tree
+7. Cosntructing a Reconciled Gene Tree Superimposed into Species Tree
 
 Clone my final repository
 ```
@@ -191,6 +194,7 @@ less ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.iqtree
 ## RESULT: Model of rate heterogeneity: Invar+FreeRate with 4 categories 
 
 I used gotree to construct a midpoint rooted gene tree. The unrooted gene tree to constructed into a midpoint rooted tree using the code below.
+## Gotree Version: v0.4.5
 ```
 gotree reroot midpoint -i ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.treefile -o ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
 ```
@@ -209,6 +213,35 @@ nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile | nw_topology - |
 
 convert ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.svg ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.pdf
 ```
+# 6. Reconciling the Gene Tree and Species Tree
+I performed the reconciliation of the gene tree and species tree using Notung to estimate duplication events and loss events. The resulting reconciliation will allow me to distinguish orthologs and paralogs.
+## Notung Version: 3 (Notung-3.0_24-beta)
+I used the following commands to make a new directory with a copy of my midpoint gene tree file
+```
+mkdir ~/lab06-$MYGIT/FIG
+cd ~/lab06-$MYGIT/FIG
+cp ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
+```
+I ran Notung to reconcile the gene tree, with the species tree to assign internal node names for the common ancestral organisms (nodes).
+```
+java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/species.tre -g ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/FIG/
+```
+## RESULTS: rec.events.txt file: Duplications: 21 and Losses: 59
+
+# 7. Cosntructing a Reconciled Gene Tree Superimposed into Species Tree
+I generated a RecPhyloXML object using python to view the gene-within-species tree reconciled using the Thirdkind program.
+## Python Version: Python 2.7, conda environment
+## Thirdkind Version: Thirdkind 3.6.8
+```
+python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg --include.species
+```
+I generated a graphic (.svg file) and converted it to a .pdf file using Thirdkind with the following lines of codes:
+```
+thirdkind -Iie -D 40 -f ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg.xml -o  ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.svg
+
+convert  -density 150 ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.svg ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.pdf
+```
+## RESULTS: The cost of my reconciled tree is 90.5
 
 
 # for me to save stuff
@@ -219,3 +252,13 @@ git add .
 git commit -a -m "Adding all new data files I generated in AWS to the repository."
 git pull --no-edit
 git push 
+
+
+Citations:
+
+1. Gotree
+If you use the Gotree/Goalign toolkit, please cite:
+Lemoine F, Gascuel O.
+Gotree/Goalign: toolkit and Go API to facilitate the development of phylogenetic workflows.
+NAR Genom Bioinform. 2021 Aug 11;3(3):lqab075.
+doi: 10.1093/nargab/lqab075. PMID: 34396097; PMCID: PMC8356961.

@@ -1,0 +1,2 @@
+/home/bio312-user/lab05-s1-spoon/species.tre 
+/home/bio312-user/lab06-s1-spoon/FIG/FIG.homologsf.al.mid.treefile

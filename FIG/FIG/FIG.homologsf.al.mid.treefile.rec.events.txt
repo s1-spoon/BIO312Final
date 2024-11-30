@@ -1,0 +1,85 @@
+COST: 90.5
+
+
+Duplications
+Gene                L. Bound            U. Bound            
+=================== =================== =================== 
+n125                Gnathostomata       N/A
+n65                 Gnathostomata       N/A
+n63                 Gnathostomata       N/A
+n61                 Gnathostomata       N/A
+n59                 Gnathostomata       N/A
+n53                 Gnathostomata       N/A
+n49                 Clupeocephala       Euteleostomi
+n47                 Clupeocephala       Euteleostomi
+n58                 Boreoeutheria       Amniota
+n124                Gnathostomata       N/A
+n76                 Amniota             Tetrapoda
+n73                 Boreoeutheria       Amniota
+n123                Gnathostomata       N/A
+n107                Gnathostomata       N/A
+n91                 Clupeocephala       Euteleostomi
+n79                 S.salar             Euteleosteomorpha
+n90                 Clupeocephala       Euteleostomi
+n86                 S.salar             Euteleosteomorpha
+n122                Euteleostomi        Gnathostomata
+n118                Euteleostomi        Gnathostomata
+n121                S.salar             Euteleosteomorpha
+Duplications: 21 
+
+
+Losses
+Species             No. of Losses  
+=================== ============== 
+Gnathostomata       0
+C.carcharias        8
+Amniota             1
+Archelosauria       1
+Clupeocephala       7
+Laurasiatheria      0
+G.gallus            2
+E.caballus          3
+G.aculeatus         3
+H.sapiens           2
+S.salar             3
+Euteleosteomorpha   2
+Euteleostomi        0
+Boreoeutheria       4
+X.laevis            6
+Tetrapoda           4
+S.townsendi         4
+D.rerio             4
+F.catus             2
+Sauria              1
+C.mydas             2
+
+Losses: 59
+
+
+Species             Duplications   cD_Nodes       Transfers_from Transfers_to   Losses         
+=================== ============== ============== ============== ============== ============== 
+Gnathostomata       9              0              0              0              0              
+C.carcharias        0              0              0              0              8              
+Amniota             1              0              0              0              1              
+Archelosauria       0              0              0              0              1              
+Clupeocephala       4              0              0              0              7              
+Laurasiatheria      0              0              0              0              0              
+G.gallus            0              0              0              0              2              
+E.caballus          0              0              0              0              3              
+G.aculeatus         0              0              0              0              3              
+H.sapiens           0              0              0              0              2              
+S.salar             3              0              0              0              3              
+Euteleosteomorpha   0              0              0              0              2              
+Euteleostomi        2              0              0              0              0              
+Boreoeutheria       2              0              0              0              4              
+X.laevis            0              0              0              0              6              
+Tetrapoda           0              0              0              0              4              
+S.townsendi         0              0              0              0              4              
+D.rerio             0              0              0              0              4              
+F.catus             0              0              0              0              2              
+Sauria              0              0              0              0              1              
+C.mydas             0              0              0              0              2              
+
+Duplications: 21
+Losses: 59
+

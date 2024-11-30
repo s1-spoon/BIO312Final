@@ -1,0 +1,709 @@
+    1  ls()
+    2  ls
+    3  sudo yum install R
+    4  R --vanilla
+    5  wget https://github.com/rcedgar/muscle/releases/download/v5.2/muscle-linux-x86.v5.2
+    6  ls
+    7  chmod +x muscle-linux-x86.v5.2
+    8  sudo cp muscle-linux-x86.v5.2 /usr/bin/muscle
+    9  muscle
+   10  ls
+   11  rm muscle-linux-x86.v5.2 
+   12  sudo yum install iqtree
+   13   wget https://github.com/iqtree/iqtree2/releases/download/v2.3.6/iqtree-2.3.6-Linux-intel.tar.gz
+   14  gunzip iqtree-2.3.6-Linux-intel.tar.gz
+   15  tar -xvf iqtree-2.3.6-Linux-intel.tar
+   16  ls
+   17  cd iqtree-2.3.6-Linux-intel/
+   18  ls
+   19  cd bin
+   20  sudo cp iqtree2 /usr/bin/iqtree
+   21  cd
+   22  iqtree
+   23  ls
+   24  rm iqtree*
+   25  rm -rf iqtre*
+   26  ls
+   27  R --vanilla
+   28  sudo R --vanilla
+   29  ls
+   30  tmux
+   31  sudo yum install tmux
+   32  mamba
+   33  conda
+   34  curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+   35  bash Miniforge3-$(uname)-$(uname -m).sh
+   36  ls
+   37  sudo bash Miniforge3-$(uname)-$(uname -m).sh
+   38  exit
+   39  mamba
+   40  nano .bashrc
+   41  exit
+   42  mamba
+   43  mamba install -c bioconda spades
+   44  mamba install -c bioconda sickle-trim
+   45  sudo mamba install -c bioconda sickle-trim
+   46  conda init --reverse --dry-run
+   47  conda init --reverse
+   48  CONDA_BASE_ENVIRONMENT=$(conda info --base)
+   49  echo The next command will delete all files in ${CONDA_BASE_ENVIRONMENT}
+   50  # Warning, the rm command below is irreversible!
+   51  # check the output of the echo command above
+   52  # To make sure you are deleting the correct directory
+   53  rm -rf ${CONDA_BASE_ENVIRONMENT}
+   54  conda init --reverse --dry-run
+   55  conda init --reverse
+   56  CONDA_BASE_ENVIRONMENT=$(conda info --base)
+   57  echo The next command will delete all files in ${CONDA_BASE_ENVIRONMENT}
+   58  sudo rm -rf ${CONDA_BASE_ENVIRONMENT}
+   59  sudo rm -f "${HOME}/.condarc"
+   60  sudo rm -fr ${HOME}/.conda
+   61  exit
+   62  ls
+   63  bash Miniforge3-$(uname)-$(uname -m).sh
+   64  exit
+   65  sudo dnf install xorg-x11-xauth -y
+   66  touch ~/.Xauthority
+   67  sudo chown bio312-user:bio312-user ~/.Xauthority
+   68  chmod 600 ~/.Xauthority
+   69  exit
+   70  mamba
+   71  ls /usr/bin/miniforge*
+   72  mamba install -c bioconda spades
+   73  mamba install -c bioconda sickle-trim
+   74  sickle
+   75  mamba install bioconda::pargenes
+   76  mamba create -n pargenes-env python=3.8
+   77  conda activate pargenes-env
+   78  mamba install bioconda::pargenes
+   79  sudo amazon-linux-extras install java-openjdk11 -y
+   80  sudo yum install java-openjdk11 -y
+   81  sudo yum install xclock xterm
+   82  xclock
+   83  sudo dnf install java-11-openjdk -y
+   84  source deactivate
+   85  mamba deactivate
+   86  sudo dnf install java-11-openjdk -y
+   87  sudo dnf install xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps -y
+   88  sudo dnf install xterm -y
+   89  java -version
+   90  sudo dnf install xeyes -y
+   91  sudo dnf install xclock -y
+   92  sudo dnf install epel-release -y
+   93  sudo dnf install xorg-x11-utils -y
+   94  mamba install -c bioconda igvtools
+   95  xclock &
+   96  ls
+   97  cd miniforge3/
+   98  ls
+   99  cd bin
+  100  ls
+  101  ls igv*
+  102  cd igvtools
+  103  cd
+  104  ls
+  105  mkdir tools
+  106  cd tools
+  107  wget https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Linux_2.16.2_WithJava.zip
+  108  unzip IGV_Linux_2.16.2_WithJava.zip
+  109  cd
+  110  bash ~/tools/IGV_Linux_2.16.2/igv.sh
+  111  sudo nano /etc/ssh/sshd_config
+  112  sudo systemctl restart sshd
+  113  gcc --version
+  114  ls
+  115  git clone --recursive https://github.com/BenoitMorel/AleRax
+  116  exit
+  117  sudo dnf install xorg-x11-xauth -y
+  118  echo $DISPLAY
+  119  export DISPLAY=:10.0  # Adjust the display number if necessary
+  120  xterm &
+  121  bash ~/tools/IGV_Linux_2.16.2/igv.sh
+  122  sudo dnf search x11
+  123  sudo dnf search xclock
+  124  sudo dnf search xterm
+  125  sudo dnf install xorg-x11-server-utils xorg-x11-apps -y
+  126  sudo dnf install xorg-x11-server-Xvfb -y
+  127  Xvfb :99 -screen 0 1024x768x16 &
+  128  export DISPLAY=:99
+  129  bash ~/tools/IGV_Linux_2.16.2/igv.sh
+  130  wkhtmltopdf --version
+  131  exit
+  132  wkhtmltopdf --version
+  133  exit
+  134  exit
+  135  tmux
+  136  [200~echo "bio312isCOOL!" | sudo -S sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && sudo systemctl restart sshd.service~
+  137  echo "bio312isCOOL!" | sudo -S sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && sudo systemctl restart sshd.service
+  138  tmux
+  139  git clone https://github.com/Bio312/lab02-s1-spoon
+  140  ls
+  141  cd lab02-myusernames1-spoon
+  142  echo 'Hello World'
+  143  MYGIT="s1-spoon"
+  144  echo $MYGIT
+  145  echo "export MYGIT=$MYGIT" >> ~/.bashrc
+  146   echo "”.devlove ,gnieb era dna ,neeb evah lufrednow tsom dna lufituaeb tsom smrof sseldne gninnigeb a elpmis os morf ,ytivarg fo wal dexif eht ot gnidrocca no gnilcyc enog sah tenalp siht tslihw ,taht dna ;eno otni ro smrof wef a otni dehtaerb yllanigiro neeb gnivah ,srewop lareves sti htiw ,efil fo weiv siht ni ruednarg si erehT“" | re
+  147  echo "”.devlove ,gnieb era dna ,neeb evah lufrednow tsom dna lufituaeb tsom smrof sseldne gninnigeb a elpmis os morf ,ytivarg fo wal dexif eht ot gnidrocca no gnilcyc enog sah tenalp siht tslihw ,taht dna ;eno otni ro smrof wef a otni dehtaerb yllanigiro neeb gnivah ,srewop lareves sti htiw ,efil fo weiv siht ni ruednarg si erehT“" | rev
+  148  cd
+  149  pwd
+  150  cd data
+  151  ls
+  152  cat animal.txt
+  153  cd
+  154  ls -l
+  155  df
+  156  df -h
+  157  cd ~/lab02-$MYGIT
+  158  ncbi-acc-download -h
+  159  ncbi-acc-download -F genbank "NW_003143794.1"
+  160  ls
+  161  less
+  162  less NW_003143794.1.gbk
+  163  ncbi-acc-download -F fasta "NW_003143794.1"
+  164  more NW_003143794.1
+  165  more NW_003143794.1.fa
+  166  less NW_003143794.1.FA
+  167  less NW_003143794.1.fa
+  168  cat NW_003143794.1.fa
+  169  q
+  170  ncbi-acc-download -F gff3 "NW_003143794.1"
+  171  filterGFF LOC100375093 NW_003143794.1.gff
+  172  gt gff3 -sort -tidy -force -o LOC100375093.sorted.gff LOC100375093.X1.gff
+  173  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri -addintrons -force -o LOC100375093.sorted.counts.gff LOC100375093.sorted.gff
+  174  less LOC100375093.sorted.counts.gff
+  175  gt gff3 -sort -tidy -o NW_003143794.1.sorted.gff NW_003143794.1.gff
+  176  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri -addintrons -force -o NW_003143794.1.counts.txt NW_003143794.1.sorted.gff
+  177  less NW_003143794.1.counts.txt
+  178  grep CDS LOC100375093.X1.gff > LOC100375093.X1.cds.gff
+  179  bedtools getfasta -s -fi NW_003143794.1.fa -fo LOC100375093.X1.cds.fa -bed LOC100375093.X1.cds.gff
+  180  less LOC100375093.X1.cds.fa
+  181  union LOC100375093.X1.cds.fa -outseq LOC100375093.X1.cds.union.fa
+  182  transeq LOC100375093.X1.cds.union.fa LOC100375093.X1.protein.fa
+  183  less LOC100375093.X1.protein.fa
+  184  bedtools getfasta--help
+  185  bedtools getfasta -- help
+  186  less NW_003143794.1.counts.txt
+  187  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri -addintrons -force -o NW_003143794.1.counts.txt NW_003143794.1.sorted.gff
+  188  less NW_003143794.1.counts.txt
+  189  more NW_003143794.1.fa
+  190  less NW_003143794.1.gbk
+  191  history > lab2.commandhistory.txt
+  192  git status
+  193  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore
+  194  awk '!NF || !seen[$0]++' .gitignore
+  195  git add .
+  196  git status
+  197  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  198  git add .git status
+  199  history > lab2.commandhistory.txt
+  200  get status
+  201  git status
+  202  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore
+  203  awk '!NF || !seen[$0]++' .gitignore
+  204  git add
+  205  git add .
+  206  git status
+  207  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  208  git config --global user.email "sara.poon@stonybrook.edu"  git config --global user.name "s1-spoon"
+  209  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  210  ls
+  211  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  212  git config --global user.email "sara.poon@stonybrook.edu"
+  213  git config --global user.name "s1-spoon"
+  214  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  215  git status
+  216  git pull --no-edit
+  217  git status
+  218  git push
+  219  git status
+  220      git clone https://github.com/Bio312/lab03-$MYGIT
+  221  cd lab03-$MYGIT
+  222  ls
+  223  pwd
+  224  cd ~/lab03-$MYGIT
+  225  gunzip proteomes/*.gz
+  226  cat  proteomes/*.faa > allprotein.fas
+  227  makeblastdb -in allprotein.fas -dbtype prot
+  228  mkdir ~/lab03-$MYGIT/globins
+  229  cd ~/lab03-$MYGIT/globins
+  230  pwd
+  231  ncbi-acc-download -F fasta -m protein "NP_000549.1"
+  232  ls
+  233  less NP_000549.1.fa
+  234  ls NP_000549.1.fa
+  235  ls NP_000549.1
+  236  blastp -db ../allprotein.fas -query NP_000549.1.fa -outfmt 0 -max_hsps 1 -out globins.blastp.typical.out
+  237  less
+  238  blastp -db ../allprotein.fas -query NP_000549.1.fa -outfmt 0 -max_hsps 1 -out globins.blastp.typical.out
+  239  less
+  240  less globins.blastp.typical.out
+  241  blastp -db ../allprotein.fas -query NP_000549.1.fa  -outfmt "6 sseqid pident length mismatch gapopen evalue bitscore pident stitle"  -max_hsps 1 -out globins.blastp.detail.out
+  242  less -S globins.blastp.detail.out
+  243  grep -c H.sapiens globins.blastp.detail.out
+  244  awk '{if ($6< 1e-30)print $1 }' globins.blastp.detail.out > globins.blastp.detail.filtered.out
+  245  wc -l globins.blastp.detail.filtered.out
+  246  less
+  247  less globins.blastp.detail.filtered.out
+  248  man wc
+  249  grep -o -E "^[A-Z]\.[a-z]+" globins.blastp.detail.filtered.out  | sort | uniq -c
+  250  mkdir ~/lab03-$MYGIT/FIG
+  251  Cd ~/lab03-$MYGIT/FIG
+  252  cd ~/lab03-$MYGIT/FIG
+  253  pwd
+  254  [200~ncbi-acc-download -F fasta -m protein "[NP_055660.1]"~
+  255  ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  256  less NP_055660.1
+  257  less ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  258  less "NP_055660.1"
+  259  pwd
+  260  ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  261  less "NP_055660.1"
+  262  less FIG
+  263  less NP_055660.1.fa
+  264  Less -out FIG.blastp.typical.out
+  265  blastp -db ../allprotein.fas -query [assession code] -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
+  266  blastp -db ../allprotein.fas -query NP_055660.1 -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
+  267  blastp -db ../allprotein.fas -query NP_055660.1.fa -outfmt 0 -max_hsps
+  268   1 -out FIG.blastp.typical.out
+  269  pwd
+  270  ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  271  less NP_055660.1.fa
+  272  blastp -db ../allprotein.fas -query NP_055660.1 -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
+  273  blastp -db ../allprotein.fas -query NP_055660.1.fa -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
+  274  Less -out FIG.blastp.typical.out
+  275  cd ~/lab03-$MYGIT/FIG
+  276  pwd
+  277  ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  278  less NP_055660.1.fa
+  279  blastp -db ../allprotein.fas -query NP_055660.1.fa -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
+  280  less -S FIG.blastp.detail.out
+  281  blastp -db ../allprotein.fas -query NP_055660.1.fa -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
+  282  less -S FIG.blastp.detail.out
+  283  pwd
+  284  cd ~/lab03-$MYGIT
+  285  gunzip proteomes/*.gz
+  286  git clone https://github.com/Bio312/lab03-$MYGIT
+  287  cd lab03-$MYGIT
+  288  pwd
+  289  cd ~/lab03-$MYGIT
+  290  gunzip proteomes/*.gz
+  291  git clone https://github.com/Bio312/lab03-$MYGIT
+  292    cd lab03-$MYGIT
+  293  cd ~/lab03-$MYGIT
+  294  gunzip proteomes/*.gz
+  295  pwd
+  296  cd proteomes/*.gz
+  297  cd allprotein.fas
+  298  less allprotein.fas
+  299  makeblastdb -in allprotein.fas -dbtype prot
+  300  mkdir ~/lab03-$MYGIT/fig
+  301  cd ~/lab03-$MYGIT/fig
+  302  pwd
+  303  `cd /home/lab03-$MYGIT/fig
+  304  pwd
+  305  `cd /home/lab03-$MYGIT/globins`
+  306  pwd
+  307  cd lab03-$MYGIT
+  308  cd ~/lab03-$MYGIT
+  309  makeblastdb -in allprotein.fas -dbtype prot
+  310  mkdir ~/lab03-$MYGIT/fig
+  311  rm ~/lab03-$MYGIT/fig
+  312  rmdir
+  313  rmdir ~/lab03-$MYGIT/fig
+  314  rmdir ~/lab03-$MYGIT/FIG
+  315  mkdir ~/lab03-$MYGIT/FIG
+  316  mkdir ~/lab03-$MYGIT/fig
+  317  cd ~/lab03-$MYGIT/fig
+  318  pwd
+  319  `cd ~/lab03-$MYGIT/globins`
+  320  pwd
+  321  ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  322  less
+  323  less ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  324  less ~/lab03-$MYGIT/globins
+  325  `cd ~/lab03-$MYGIT/figs`
+  326  `cd ~/lab03-$MYGIT/fig`
+  327  pwd
+  328  ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  329  less ncbi-acc-download -F fasta -m protein "NP_055660.1"
+  330  pwd
+  331  cd~/lab03-$MYGIT
+  332  ls
+  333  cd lab03-s1-spoon/
+  334  cd ~/lab03-$MYGIT/FIG
+  335  pwd
+  336  ls
+  337  less NP_055660.1.fa
+  338  blastp -db ../allprotein.fas -query NP_055660.1.fa -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
+  339  less FIG.blastp.typical.out
+  340  blastp -db ../allprotein.fas -query NP_055660.1.fa  -outfmt "6 sseqid pident length mismatch gapopen evalue bitscore pident stitle"  -max_hsps 1 -out FIG.blastp.detail.out
+  341  grep -c H.sapiens FIG.blastp.detail.out
+  342  less FIG.blastp.detail.out
+  343  less FIG.blastp.typical.out
+  344  awk '{if ($6< 1e-30)print $1 }' FIG.blastp.detail.out > FIG.blastp.detail.filtered.out
+  345  ls
+  346  less FIG.blastp.detail.filtered.out
+  347  wc FIG.blastp.detail.filtered.out
+  348  grep -o -E "^[A-Z]\.[a-z]+" FIG.blastp.detail.filtered.out  | sort | uniq -c
+  349  ls
+  350  cd lab03-s1-spoon
+  351  ls
+  352  cd globins
+  353  wc globins.blastp.detail.out
+  354  cd ~/lab03-$MYGIT
+  355  ls
+  356  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  357  git add .
+  358  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  359  git pull --rebase=false --no-edit
+  360  git push 
+  361  git clone https://github.com/Bio312/lab04-$MYGIT
+  362  cd lab04-$MYGIT
+  363  ls
+  364  cd lab04-$s1-spoon
+  365  git clone https://github.com/Bio312/lab04-$s1-spoon
+  366  cd lab04-$MYGIT
+  367  ls
+  368  cd lab04-$MYGIT
+  369  pwd
+  370  ls
+  371  cd lab04-s1-spoon
+  372  ls
+  373  cd lab04-$MYGIT
+  374  pwd
+  375  ls
+  376  pwd
+  377  nano ~/lab04-$MYGIT/toy.fas 
+  378  muscle -align ~/lab04-$MYGIT/toy.fas -output ~/lab04-$MYGIT/toy.al.fas
+  379  alv -kli  ~/lab04-$MYGIT/toy.al.fas 
+  380  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/toy.al.fas -output sim
+  381  alignbuddy -pi ~/lab04-$MYGIT/toy.al.fas
+  382  pwd
+  383  cd /home/bio312-user/lab03-s1-spoon
+  384  ls
+  385  cd /home/bio312-user/lab04-s1-spoon
+  386  mkdir ~/lab04-$MYGIT/globins
+  387  cd ~/lab04-$MYGIT/globins
+  388  pwd
+  389  seqkit grep --pattern-file ~/lab03-$MYGIT/globins/globins.blastp.detail.filtered.out ~/lab03-$MYGIT/allprotein.fas | seqkit grep -v -p "carpio" > ~/lab04-$MYGIT/globins/globins.homologs.fas
+  390  less
+  391  less globins.homologs.fas
+  392  ls
+  393  pwd
+  394  cd ~
+  395  ls
+  396  cd lab03-s1-spoon/
+  397  ls
+  398  less allprotein.fas
+  399  grep --help
+  400  grep 'carpio' allprotein.fas
+  401  grep 'h' allprotein.fas
+  402  less globins.homologs.fas
+  403  cd ~/lab04-$MYGIT/globins
+  404  ls
+  405  less globins.homologs.fas
+  406  muscle -align ~/lab04-$MYGIT/globins/globins.homologs.fas -output ~/lab04-$MYGIT/globins/globins.homologs.al.fas
+  407  alv -kli  ~/lab04-$MYGIT/globins/globins.homologs.al.fas | less -RS
+  408  alv -kli --majority ~/lab04-$MYGIT/globins/globins.homologs.al.fas | less -RS
+  409  alv -h`
+  410  alv -kli --majority ~/lab04-$MYGIT/globins/globins.homologs.al.fas | less -RS
+  411  pwd
+  412  cd ~/lab04-$MYGIT/globins/globins.homologs.al.fas
+  413  cd lab04-$MYGIT
+  414  ls
+  415  cd globins
+  416  ls
+  417  globins.homologs.al.fas
+  418  cd globins.homologs.al.fas
+  419  ls
+  420  pwd
+  421  ls
+  422  cd globins.homologs.al.fas
+  423  cd '/home/bio312-user/lab04-s1-spoon/globins'
+  424  ls
+  425  alv -kli  ~/lab04-$MYGIT/globins/globins.homologs.al.fas | less -RS
+  426  alv -kli --majority ~/lab04-$MYGIT/globins/globins.homologs.al.fas | less -RS
+  427  Rscript --vanilla ~/lab04-$MYGIT/plotMSA.R  ~/lab04-$MYGIT/globins/globins.homologs.al.fas
+  428  less ~/lab04-$MYGIT/globins/globins.homologs.al.fas
+  429  alignbuddy  -al  ~/lab04-$MYGIT/globins/globins.homologs.al.fas
+  430  alignbuddy -trm all  ~/lab04-$MYGIT/globins/globins.homologs.al.fas | alignbuddy  -al
+  431  alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/globins/globins.homologs.al.fas | alignbuddy  -al
+  432  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/globins/globins.homologs.al.fas -output sim
+  433   alignbuddy -pi ~/lab04-$MYGIT/globins/globins.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+  434       END{ print(100*sum/num) } '
+  435  source ~/.bashrc
+  436  ls
+  437  cd ~/lab04-$MYGIT/FIG
+  438  pwd
+  439  cd /home/bio312-user/
+  440  ls
+  441  cd lab03-s1-spoon
+  442  ls
+  443  cd FIG
+  444  ls
+  445  pwd
+  446  mkdir ~/lab04-$MYGIT/FIG
+  447  cd  ~/lab04-$MYGIT/FIG
+  448  pwd
+  449  seqkit grep --pattern-file ~/lab03-$MYGIT/FIG/FIG.blastp.detail.filtered.out ~/lab03-$MYGIT/allprotein.fas | seqkit grep -v -p "carpio" > ~/lab04-$MYGIT/FIG/FIG.homologs.fas
+  450  less ~/lab04-$MYGIT/FIG/FIG.homologs.fas
+  451  muscle -align ~/lab04-$MYGIT/FIG/FIG.homologs.fas -output ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas
+  452   alv -kli  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | less -RS
+  453  alv -kli --majority ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | less -RS
+  454   Rscript --vanilla ~/lab04-$MYGIT/plotMSA.R  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas
+  455  alignbuddy  -al  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas
+  456   alignbuddy -trm all  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | alignbuddy  -al
+  457  Alignment length with invariant (completely conserved) positions removed
+  458  alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | alignbuddy  -al
+  459  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas -output sim
+  460  alignbuddy -pi ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+  461       END{ print(100*sum/num) } '
+  462  cd ~/lab04-$MYGIT
+  463  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  464  git add .
+  465  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  466  git pull --rebase=false --no-edit
+  467  pwd
+  468  ls
+  469  cd lab04-s1-spoon
+  470  ls
+  471  cd ~/lab04-$MYGIT
+  472  pwd
+  473  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  474  git add .
+  475  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  476  git push 
+  477  pwd
+  478  ls
+  479  cd lab04-s1-spoon
+  480  ls
+  481  cd FIG
+  482  ls
+  483  less FIG.homologs.fas
+  484  alv -kil -w 100 ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | aha > ~/lab04-$MYGIT/FIG/FIG.homologs.al.html
+  485  a2ps -r --columns=1 ~/lab04-$MYGIT/FIG/FIG.homologs.al.html -o ~/lab04-$MYGIT/FIG/FIG.homologs.al.ps
+  486  ps2pdf ~/lab04-$MYGIT/FIG/FIG.homologs.al.ps ~/lab04-$MYGIT/FIG/FIG.homologs.al.pdf
+  487  ls
+  488  less FIG.homologs.al.pdf
+  489  cat FIG.homologs.al.pdf
+  490  q1;2cpwd
+  491  pwd
+  492  git clone https://github.com/Bio312/lab05-$MYGIT
+  493  cd lab05-$MYGIT
+  494  ls
+  495  pwd
+  496  echo "((You,your_sister),(your_cousin,your_other_cousin));" > ~/lab05-$MYGIT/family.tre
+  497  less family.tre
+  498  man echo
+  499  echo ((You,your_sister)your_parents,(your_cousin,your_other_cousin)your_aunt$uncle)your_grandparents;
+  500  nw_display ~/lab05-$MYGIT/family.tre 
+  501  nw_display -s ~/lab05-$MYGIT/family.tre > ~/lab05-$MYGIT/family.tre.svg
+  502  `Rscript`:  an R Interpreter which helps in the execution of R commands present in the script file.
+  503  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/family.tre ~/lab05-$MYGIT/family.unrooted.pdf 1 35
+  504  echo "((You,your_sister),(your_cousin,your_other_cousin, your other other cousin));" > ~/lab05-$MYGIT/myfamily5.tre
+  505  nw_display ~/lab05-$MYGIT/myfamily5.tre
+  506  nw_display -s ~/lab05-$MYGIT/family.tre > ~/lab05-$MYGIT/myfamily5.tre
+  507  nw_display -s ~/lab05-$MYGIT/family.tre > ~/lab05-$MYGIT/myfamily5.tre.svg
+  508  echo "((You,your_sister),(your_cousin,your_other_cousin,your_other_other_cousin));" > ~/lab05-$MYGIT/myfamily5.tre
+  509  nw_display ~/lab05-$MYGIT/myfamily5.tre
+  510  nw_display -s ~/lab05-$MYGIT/family.tre > ~/lab05-$MYGIT/myfamily5.tre.svg
+  511  nw_display -s ~/lab05-$MYGIT/myfamily5.tre > ~/lab05-$MYGIT/myfamily5.tre.svg
+  512  echo "((You,your_sister),(your_cousin,your_other_cousin,your_other_other_cousin));" > ~/lab05-$MYGIT/my.family.tre
+  513  echo "((You,your_sister),(your_cousin,your_other_cousin,your_other_other_cousin))" > ~/lab05-$MYGIT/my.family.tre
+  514  nw_display ~/lab05-$MYGIT/my.family.tre 
+  515  echo "((You,your_sister),(your_cousin,your_other_cousin,your_other_other_cousin));" > ~/lab05-$MYGIT/my.family.tre
+  516  nw_display ~/lab05-$MYGIT/my.family.tre 
+  517  nw_display -s ~/lab05-$MYGIT/my.family.tre > ~/lab05-$MYGIT/my.family.tre.svg
+  518  echo "((Hemichordata,Echinodermata),(Cephalochordata,(Urochordata,(Agnatha,(Chondrichthyes,((Amphibia,(Sauropsida,Mammalia)Amniota)Tetrapoda,Actinopterygii)Euteleostomi)Gnathostomata)Vertebrata))Chordata)Deuterostomia;" > ~/lab05-$MYGIT/subphyla.tre
+  519  nw_display ~/lab05-$MYGIT/subphyla.tre
+  520  echo "((Hemichordata,Echinodermata),(Cephalochordata,(Urochordata,(Agnatha,(Chondrichthyes,((Amphibia,Mammalia),Actinopterygii))))));" | nw_display -
+  521  nw_reroot subphyla.tre Vertebrata >subphyla.reroot.tre   
+  522  nw_display subphyla.reroot.tre
+  523  echo "((((((F.catus,E.caballus)Laurasiatheria,H.sapiens)Boreoeutheria,(S.townsendi,(C.mydas,G.gallus)Archelosauria)Sauria)Amniota,X.laevis)Tetrapoda,(D.rerio,(S.salar,G.aculeatus)Euteleosteomorpha)Clupeocephala)Euteleostomi,C.carcharias)Gnathostomata;"  > ~/lab05-$MYGIT/species.tre
+  524  nw_display ~/lab05-$MYGIT/species.tre
+  525  nw_display -s ~/lab05-$MYGIT/species.tre > ~/lab05-$MYGIT/species.tre.svg
+  526  convert ~/lab05-$MYGIT/species.tre.svg ~/lab05-$MYGIT/species.tre.pdf
+  527  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/species.tre ~/lab05-$MYGIT/species.unrooted.pdf 0.4 35
+  528  ls
+  529  mkdir ~/lab05-$MYGIT/globins
+  530  cd ~/lab05-$MYGIT/globins  
+  531  sed 's/ /_/g'  ~/lab04-$MYGIT/globins/globins.homologs.al.fas | seqkit grep -v -r -p "dupelabel" >  ~/lab05-$MYGIT/globins/globins.homologsf.al.fas
+  532  iqtree -s ~/lab05-$MYGIT/globins/globins.homologsf.al.fas -bb 1000 -nt 2 
+  533  less /home/bio312-user/lab05-s1-spoon/globins/globins.homologsf.al.fas.iqtree
+  534  less ~/lab05-$MYGIT/globins/globins.homologsf.al.fas.iqtree
+  535  nw_display ~/lab05-$MYGIT/globins/globins.homologsf.al.fas.treefile
+  536  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/globins/globins.homologsf.al.fas.treefile ~/lab05-$MYGIT/globins/globins.homologsf.al.fas.treefile.pdf 0.4 15
+  537  gotree reroot midpoint -i ~/lab05-$MYGIT/globins/globins.homologsf.al.fas.treefile -o ~/lab05-$MYGIT/globins/globins.homologsf.al.mid.treefile
+  538  nw_order -c n ~/lab05-$MYGIT/globins/globins.homologsf.al.mid.treefile  | nw_display -
+  539  nw_order -c n ~/lab05-$MYGIT/globins/globins.homologsf.al.mid.treefile | nw_display -w 1000 -b 'opacity:0' -s  >  ~/lab05-$MYGIT/globins/globins.homologsf.al.mid.treefile.svg -
+  540  convert  ~/lab05-$MYGIT/globins/globins.homologsf.al.mid.treefile.svg  ~/lab05-$MYGIT/globins/globins.homologsf.al.mid.treefile.pdf
+  541  nw_order -c n ~/lab05-$MYGIT/globins/globins.homologsf.al.mid.treefile | nw_topology - | nw_display -s  -w 1000 > ~/lab05-$MYGIT/globins/globins.homologsf.al.midCl.treefile.svg -
+  542  convert ~/lab05-$MYGIT/globins/globins.homologsf.al.midCl.treefile.svg ~/lab05-$MYGIT/globins/globins.homologsf.al.midCl.treefile.pdf
+  543  nw_reroot ~/lab05-$MYGIT/globins/globins.homologsf.al.fas.treefile H.sapiens_HBG1_hemoglobin_subunit_gamma1 H.sapiens_HBG2_hemoglobin_subunit_gamma2 H.sapiens_HBB_hemoglobin_subunit_beta H.sapiens_HBD_hemoglobin_subunit_delta >~/lab05-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile
+  544  nw_order -c n ~/lab05-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile | nw_topology - | nw_display -s  -w 1000 > ~/lab05-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile.svg -
+  545  convert ~/lab05-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile.svg ~/lab05-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile.pdf
+  546  ls
+  547  mkdir ~/lab05-$MYGIT/FIG
+  548  cd ~/lab05-$MYGIT/FIG 
+  549  sed 's/ /_/g'  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | seqkit grep -v -r -p "dupelabel" >  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas
+  550  iqtree -s ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas -bb 1000 -nt 2 
+  551  less ~/lab05-$MYGIT/globins/globins.homologsf.al.fas.iqtree
+  552  less ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.iqtree
+  553  nw_display ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.treefile
+  554  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.treefile ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.treefile.pdf 0.4 15
+  555  ls
+  556  gotree reroot midpoint -i ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.treefile -o ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
+  557  nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile  | nw_display -
+  558  nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile | nw_display -w 1000 -b 'opacity:0' -s  >  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.svg -
+  559  convert  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.svg  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.pdf
+  560  less ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.pdf
+  561  ls
+  562  nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile | nw_topology - | nw_display -s  -w 1000 > ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.svg -
+  563  convert ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.svg ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.pdf
+  564  history > lab5.commandhistory.txt
+  565  cd ~/lab05-$MYGIT
+  566  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  567  git add .
+  568  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  569  git pull --no-edit
+  570  git push 
+  571  ls
+  572  pwd
+  573  mamba create -n my_python27_env python=2.7
+  574  conda activate my_python27_env
+  575  mamba install -y ete3
+  576  git clone https://github.com/Bio312/lab06-$MYGIT
+  577  ls
+  578  pwd
+  579  cd lab06-$MYGIT
+  580  ls
+  581  pwd
+  582  java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar --help  
+  583  echo "(frog,(horse,cat)Mammalia)Tetrapoda;" > toyspecies.tre
+  584  echo "((frog_Alpha,(horse_Alpha,cat_Alpha)),(frog_Beta,horse_Beta));" > toygenetree.tre
+  585  nw_display ~/lab06-$MYGIT/toyspecies.tre
+  586  less toyspecies.tre
+  587  echo "((frog_Alpha,(horse_Alpha,cat_Alpha)),(frog_Beta,horse_Beta));" > toygenetree.tre
+  588  nw_display ~/lab06-$MYGIT/toyspecies.tre
+  589  nw_display ~/lab06-$MYGIT/toygenetree.tre
+  590  java -jar  ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab06-$MYGIT/toyspecies.tre -g ~/lab06-$MYGIT/toygenetree.tre --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/
+  591  less ~/lab06-$MYGIT/toygenetree.tre.rec.events.txt
+  592  python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/lab06-$MYGIT/toygenetree.tre.rec.ntg --include.species -o ~/lab06-$MYGIT/toygenetree.tre.rec.xml
+  593  thirdkind -Iie -f ~/lab06-$MYGIT/toygenetree.tre.rec.xml -o  ~/lab06-$MYGIT/toygenetree.tre.rec.svg
+  594  convert -density 300 ~/lab06-$MYGIT/toygenetree.tre.rec.svg  ~/lab06-$MYGIT/toygenetree.tre.rec.pdf
+  595  man -f
+  596  man thirdkind
+  597  help thirdkind
+  598  nw_display ~/lab05-$MYGIT/species.tre
+  599  cd ~/lab06-$MYGIT/globins
+  600  ls ~/lab06-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile 
+  601  gotree prune -i ~/lab06-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile -o ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile H.sapiens_HBG1_hemoglobin_subunit_gamma1 H.sapiens_HBG2_hemoglobin_subunit_gamma2 H.sapiens_HBB_hemoglobin_subunit_beta H.sapiens_HBD_hemoglobin_subunit_delta
+  602  java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/species.tre -g ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/globins/
+  603  nw_display ~/lab05-$MYGIT/species.tre
+  604  grep NOTUNG-SPECIES-TREE ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile.rec.ntg | sed -e "s/^\[&&NOTUNG-SPECIES-TREE//" -e "s/\]/;/" | nw_display 
+  605  grep NOTUNG-SPECIES-TREE ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile.rec.ntg | sed -e "s/^\[&&NOTUNG-SPECIES-TREE//" -e "s/\]/;/" | nw_display -
+  606  python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile.rec.ntg --include.species
+  607  thirdkind -Iie -D 40 -f ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile.rec.ntg.xml -o  ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile.rec.svg
+  608  convert  -density 150 ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile.rec.svg ~/lab06-$MYGIT/globins/globins.homologsf.pruned.treefile.rec.pdf
+  609  less reconciled.events.txt 
+  610  pwd
+  611  cd ~/lab06-$MYGIT/FIG
+  612  mkdir ~/lab06-$MYGIT/FIG
+  613  cp ~/lab05-$MYGIT/FIG/FIG.homologs.al.mid.treefile ~/lab06-$MYGIT/FIG/FIG.homologs.al.mid.treefile
+  614  cd ~/lab06-$MYGIT/FIG
+  615  ls
+  616  pwd
+  617  cp ~/lab05-$MYGIT/FIG/FIG.homologs.al.mid.treefile ~/lab06-$MYGIT/FIG/FIG.homologs.al.mid.treefile
+  618  `cp ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile` 
+  619  ls
+  620  java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/FIG.tre -g ~/lab06-$MYGIT/FIG/FIG.homologsf.pruned.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/FIG/
+  621  git clone https://github.com/s1-spoon/assignedFIG.git
+  622  pwd
+  623  cd assignedFIG.git
+  624  mkdir assignedFIG.git
+  625  ls
+  626  pwd
+  627  cd assignedFIG 
+  628  pwd
+  629  ls
+  630  pwd
+  631  LS
+  632  ls
+  633  git clone https://github.com/s1-spoon/assnSAC-FIG
+  634  ls
+  635  cd assnSAC-FIG
+  636  ls
+  637  cd lab06-s1-spoon 
+  638  pwd
+  639  ls
+  640  rm assignFIG
+  641  ls
+  642  cd
+  643  cd FIG
+  644  ls
+  645  cd lab06-s1-spoon
+  646  ls
+  647  cd
+  648  cd FIG
+  649  pwd
+  650  ls
+  651  cd lab06-s1-spoon 
+  652  ls
+  653  cd FIG
+  654  ls
+  655  rm assignedFIG
+  656  rmdir assignedFIG
+  657  assignedFIG.git
+  658  cd
+  659  cd assignedFIG.git
+  660  cd assignedFIG
+  661  pwd
+  662  ls
+  663  cd lab06-s1-spoon 
+  664  ls
+  665  cd FIG
+  666  LS
+  667  ls
+  668  cd assignedFIG
+  669  ls
+  670  rm README.md
+  671  rmdir FIG
+  672  PWD
+  673  pwd
+  674  rmdir assignedFIG
+  675  rmdir FIG/assignedFIG
+  676  pwd
+  677  cd ~/lab06-$MYGIT
+  678  ls
+  679  cd ~/lab06-$MYGIT/globins
+  680  ls
+  681  cd ~/lab06-$MYGIT/FIG
+  682  LS
+  683  ls
+  684  conda activate my_python27_env
+  685  pwd
+  686  cp ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
+  687  java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/FIG.tre -g ~/lab06-$MYGIT/FIG/FIG.homologsf.pruned.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/FIG/
+  688  less FIG.homologsf.pruned.treefile.rec.events.txt
+  689  java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/species.tre -g ~/lab06-$MYGIT/FIG/FIG.homologsf.pruned.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/FIG/
+  690  less FIG.homologsf.pruned.treefile.rec.events.txt
+  691  pwd
+  692  ls
+  693  java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/species.tre -g ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/FIG/
+  694  nw_display ~/lab05-$MYGIT/species.tre
+  695  grep NOTUNG-SPECIES-TREE ~/lab06-$MYGIT/FIG/FIG.homologsf.pruned.treefile.rec.ntg | sed -e "s/^\[&&NOTUNG-SPECIES-TREE//" -e "s/\]/;/" | nw_display -
+  696  grep NOTUNG-SPECIES-TREE ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg | sed -e "s/^\[&&NOTUNG-SPECIES-TREE//" -e "s/\]/;/" | nw_display -
+  697  pwd
+  698  ls
+  699  cd lab06-s1-spoon 
+  700  ls
+  701  cd FIG
+  702  cp ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
+  703  ls
+  704  python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg --include.species
+  705  conda activate my_python27_env
+  706  python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg --include.species
+  707  thirdkind -Iie -D 40 -f ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg.xml -o  ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.svg
+  708  convert  -density 150 ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.svg ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.pdf
+  709  history > lab6.commandhistory.txt
