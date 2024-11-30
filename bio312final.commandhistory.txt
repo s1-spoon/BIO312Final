@@ -1,3 +1,65 @@
+    1  ls
+    2  tmux
+    3  sudo yum install tmux
+    4  mamba
+    5  conda
+    6  curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+    7  bash Miniforge3-$(uname)-$(uname -m).sh
+    8  ls
+    9  sudo bash Miniforge3-$(uname)-$(uname -m).sh
+   10  exit
+   11  mamba
+   12  nano .bashrc
+   13  exit
+   14  mamba
+   15  mamba install -c bioconda spades
+   16  mamba install -c bioconda sickle-trim
+   17  sudo mamba install -c bioconda sickle-trim
+   18  conda init --reverse --dry-run
+   19  conda init --reverse
+   20  CONDA_BASE_ENVIRONMENT=$(conda info --base)
+   21  echo The next command will delete all files in ${CONDA_BASE_ENVIRONMENT}
+   22  # Warning, the rm command below is irreversible!
+   23  # check the output of the echo command above
+   24  # To make sure you are deleting the correct directory
+   25  rm -rf ${CONDA_BASE_ENVIRONMENT}
+   26  conda init --reverse --dry-run
+   27  conda init --reverse
+   28  CONDA_BASE_ENVIRONMENT=$(conda info --base)
+   29  echo The next command will delete all files in ${CONDA_BASE_ENVIRONMENT}
+   30  sudo rm -rf ${CONDA_BASE_ENVIRONMENT}
+   31  sudo rm -f "${HOME}/.condarc"
+   32  sudo rm -fr ${HOME}/.conda
+   33  exit
+   34  ls
+   35  bash Miniforge3-$(uname)-$(uname -m).sh
+   36  exit
+   37  sudo dnf install xorg-x11-xauth -y
+   38  touch ~/.Xauthority
+   39  sudo chown bio312-user:bio312-user ~/.Xauthority
+   40  chmod 600 ~/.Xauthority
+   41  exit
+   42  mamba
+   43  ls /usr/bin/miniforge*
+   44  mamba install -c bioconda spades
+   45  mamba install -c bioconda sickle-trim
+   46  sickle
+   47  mamba install bioconda::pargenes
+   48  mamba create -n pargenes-env python=3.8
+   49  conda activate pargenes-env
+   50  mamba install bioconda::pargenes
+   51  sudo amazon-linux-extras install java-openjdk11 -y
+   52  sudo yum install java-openjdk11 -y
+   53  sudo yum install xclock xterm
+   54  xclock
+   55  sudo dnf install java-11-openjdk -y
+   56  source deactivate
+   57  mamba deactivate
+   58  sudo dnf install java-11-openjdk -y
+   59  sudo dnf install xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps -y
+   60  sudo dnf install xterm -y
+   61  java -version
+   62  sudo dnf install xeyes -y
    63  sudo dnf install xclock -y
    64  sudo dnf install epel-release -y
    65  sudo dnf install xorg-x11-utils -y
@@ -925,76 +987,5 @@
   987  git commit -a -m "Adding all new data files I generated in AWS to the repository."
   988  git pull --no-edit
   989  git push 
-  990  git clone https://github.com/s1-spoon/bio312final
-  991  pwd
-  992  ls
-  993  cd bio312final
-  994  pwd
-  995  cd  lab03-s1-spoon
-  996  cd ~/ lab03-s1-spoon
-  997  ls
-  998  cd lab03-$MYGIT
-  999  pwd
- 1000  cd /home/bio312-user/
- 1001  cd ~/lab03-$MYGIT
- 1002  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
- 1003  git add .
- 1004  git commit -a -m "Adding all new data files I generated in AWS to the repository."
- 1005  git pull --rebase=false --no-edit
- 1006  git commit -a -m "Adding all new data files I generated in AWS to the repository."
- 1007  git pull --rebase=false --no-edit
- 1008  git push 
- 1009  cd ~/lab03-$MYGIT
- 1010  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
- 1011  git add .
- 1012  git commit -a -m "Adding all new data files I generated in AWS to the repository."
- 1013  git push 
- 1014  git add .
- 1015  git commit -a -m "Adding all new data files I generated in AWS to the repository."
- 1016  git push 
- 1017  ls
- 1018  cd ~/Bio312
- 1019  pwd
- 1020  cd /home/bio312-user/
- 1021  pwd
- 1022  ls
- 1023  cd bio312final
- 1024  cd ~/lab03-$MYGIT
- 1025  ls
- 1026  pwd
- 1027  gunzip proteomes/*.gz
- 1028  less allprotein.fas
- 1029  cp -r lab03-$MYGIT/FIG bio312final/FIG
- 1030  cd bio312final
- 1031  ls
- 1032  cd ~/bio312final
- 1033  mkdir ~/bio312final/FIG
- 1034  cp -r lab03-$MYGIT/FIG bio312final/FIG
- 1035  cp -r ~/lab03-$MYGIT/FIG ~/bio312final/FIG
- 1036  wc -l FIG.blastp.detail.filtered.out
- 1037  pwd
- 1038  ls
- 1039  cd FIG
- 1040  pwd
- 1041  ls
- 1042  cd FIG
- 1043  ls
- 1044  wc -l FIG.blastp.detail.filtered.out
- 1045  grep -o -E "^[A-Z]\.[a-z]+" FIG.blastp.detail.filtered.out  | sort | uniq -c
- 1046  cd ~/bio312-s1-spoon
- 1047  pwd
- 1048  cd /home/bio312-user/
- 1049  pwd
- 1050  git clone https://github.com/s1-spoon/bio312final
- 1051  git clone https://github.com/Bio312/projectrepo-s1-spoon
- 1052  pwd
- 1053  cd
- 1054  ls
- 1055  cd bio312final 
- 1056  cd ~/bio312final
- 1057  history > bio312final.commandhistory.txt 
- 1058  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
- 1059  git add .
- 1060  git pull --no-edit
- 1061  cd ~/bio312final
- 1062  history > bio312final.commandhistory.txt 
+  990  cd ~/bio312final
+  991  history > bio312final.commandhistory.txt 
