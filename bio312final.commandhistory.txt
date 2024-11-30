@@ -1,10 +1,3 @@
-    1  history > lab2.commandhistory.txt
-    2  git status
-    3  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore
-    4  awk '!NF || !seen[$0]++' .gitignore
-    5  git add .
-    6  git status
-    7  git commit -a -m "Adding all new data files I generated in AWS to the repository."
     8  git add .git status
     9  history > lab2.commandhistory.txt
    10  get status
@@ -996,3 +989,12 @@
   996   git rm --cached FIG/FIG/assignedFIG -f
   997  cd ~/bio312final
   998  history > bio312final.commandhistory.txt 
+  999  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+ 1000  git add .
+ 1001   git rm --cached FIG/FIG/assignedFIG -f
+ 1002  git add .
+ 1003  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+ 1004  git pull --no-edit
+ 1005  git push
+ 1006  cd ~/bio312final
+ 1007  history > bio312final.commandhistory.txt 

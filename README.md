@@ -22,7 +22,7 @@ Below is the table of contents.
 4. Constructing Species Tree
 5. Constructing Gene Tree with Best Alignment
 6. Reconciling Gene Tree and Species Tree
-7. Cosntructing a Reconciled Gene Tree Superimposed into Species Tree
+7. Constructing a Reconciled Gene Tree Superimposed into Species Tree
 
 Clone my final repository
 ```
@@ -228,7 +228,7 @@ java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/sp
 ```
 ## RESULTS: rec.events.txt file: Duplications: 21 and Losses: 59
 
-# 7. Cosntructing a Reconciled Gene Tree Superimposed into Species Tree
+# 7. Constructing a Reconciled Gene Tree Superimposed into Species Tree
 I generated a RecPhyloXML object using python to view the gene-within-species tree reconciled using the Thirdkind program.
 ## Python Version: Python 2.7, conda environment
 ## Thirdkind Version: Thirdkind 3.6.8
@@ -242,23 +242,3 @@ thirdkind -Iie -D 40 -f ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg
 convert  -density 150 ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.svg ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.pdf
 ```
 ## RESULTS: The cost of my reconciled tree is 90.5
-
-
-# for me to save stuff
-cd ~/bio312final
-history > bio312final.commandhistory.txt 
-find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
-git add .
-git commit -a -m "Adding all new data files I generated in AWS to the repository."
-git pull --no-edit
-git push 
-
-
-Citations:
-
-1. Gotree
-If you use the Gotree/Goalign toolkit, please cite:
-Lemoine F, Gascuel O.
-Gotree/Goalign: toolkit and Go API to facilitate the development of phylogenetic workflows.
-NAR Genom Bioinform. 2021 Aug 11;3(3):lqab075.
-doi: 10.1093/nargab/lqab075. PMID: 34396097; PMCID: PMC8356961.
