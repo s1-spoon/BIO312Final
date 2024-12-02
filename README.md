@@ -1,43 +1,38 @@
 # BIO312Final
-This is my final repository for final term paper for the Bionformatics course taught by Professor Joshua Rest.
-This repository will walk you throught all the steps I took to support the basis of my paper.
-In order for you to be able to view the files I created for my analysis, the original directory has been copied and placed in this repository using the following codes
-```
-mkdir ~/bio312final/FIG
-cp -r ~/lab03-$MYGIT/FIG ~/bio312final/FIG
+This is my final repository for my BIO312 Bioinformatics final repository for the Fall 2024 semester. The course is taught at Stony Brook University by Professor Joshua Rest.
+The goal of this repository is to walk you throught all the steps I took to support the basis of my paper, "Finding a Model Organism for Studying Human Illnesses caused by FIG4 Mutations through Phylogenetic Analysis of the SAC-Domain Protein Gene Family".
 
-cp -r ~/lab04-$MYGIT/FIG ~/bio312final/FIG
-
-cp -r ~/lab05-$MYGIT/FIG ~/bio312final/FIG
-
-cp -r ~/lab05-$MYGIT/species.tre.pdf ~/bio312final/FIG
-
-cp -r ~/lab06-$MYGIT/FIG ~/bio312final/FIG
-```
-
-## Introduction 
-
-Below is the table of contents.
+# Introduction 
+Below is the table of contents and sequential order of the steps I took to find and analyze my results.
+The graphs generated
 1. BLAST Proteome Database
-2. Filtering out HSP to my Query Sequence
+2. Filtering out HSP homologs with e-value less than 1e-30 to my Query Sequence
 3. Alignment to Query Sequence
 4. Constructing Species Tree
 5. Constructing Gene Tree with Best Alignment
 6. Reconciling Gene Tree and Species Tree
 7. Constructing a Reconciled Gene Tree Superimposed into Species Tree
 
-Clone my final repository
+To work through the workflow of my repository first clone my repository and change to my directory:
 ```
 git clone https://github.com/s1-spoon/bio312final
-```
-move into clone folder
-```
+
 cd ~/bio312final
 ```
+You should be able to see a file named "FIG". Within the FIG file, you can view the files I created for my research during BIO312 Lab. I copied these files by using the follow lines of code:
+```
+mkdir ~/bio312final/FIG
+cp -r ~/lab03-$MYGIT/FIG ~/bio312final/FIG
+cp -r ~/lab04-$MYGIT/FIG ~/bio312final/FIG
+cp -r ~/lab05-$MYGIT/FIG ~/bio312final/FIG
+cp -r ~/lab05-$MYGIT/species.tre.pdf ~/bio312final/FIG
+cp -r ~/lab06-$MYGIT/FIG ~/bio312final/FIG
+```
 # 1. BLAST Proteome Database
-### 11 chordate species studied in my study
-Below are the organisms speices name and the taxonomic ID
-| Organism                        | Taxonomic ID |
+I created a BLAST database with single-isoform proteomes for BLAST to use for sorting and studying 11 chordate subject species. The list of species accompanied by their Taxonomic ID in the chart below.
+
+### 11 Chordate Species in My Study
+| Organism                         | Taxonomic ID |
 |---------------------------------|--------------|
 | *Carcharodon carcharias*        | 13397        |
 | *Chelonia mydas*                | 8469         |
@@ -51,13 +46,10 @@ Below are the organisms speices name and the taxonomic ID
 | *Sphaerodactylus townsendi*     | 933632       |
 | *Xenopus laevis*                | 8355         |
 
-### Create a BLAST database with single-isoform proteomes for BLAST to use for sorting and studying the 11 subject species
-1. RefSeq select was used to take into account gene experience filter out human proteins, since human genome is very large and contains a lot of information
-2. Longested isoform for other species 
+### Create BLAST Database by Filterring Out Desired Proteomes
+To created the BLAST database, I used RefSeq to filter out BLAST search sequence results by two bases: 1) Since human gene are very large and contains of information, I needed account for gene expression and filter out human proteins, and 2) I set the parameter to filter our the Longest isoform for the non-human species. 
 
-### The following steps can only be done once.
-Extract, uncompress, and concatenate the proteome files from ~bio312/lab03-s1-spoon.
-Copyright and credits for creating the proteome file belongs to Professor Joshua Rest, 2024.
+To repeat what I did, I used the following code to extract, uncompress, and concatenate the proteome files from ~bio312/lab03-s1-spoon. Copyright and credit for creating the proteome file belongs to Professor Joshua Rest, 2024. Note: that this step can only be performed once.
 ```
 cd ~/lab03-$MYGIT
 
@@ -65,41 +57,37 @@ gunzip proteomes/*.gz
 
 cat  proteomes/*.faa > allprotein.fas
 ```
-build BLAST database with concenated proteomes and create a working directory
+I used the following code to build the BLAST database with concenated proteomes. I created a working directory containing these proteomes.
 ```
 makeblastdb -in allprotein.fas -dbtype prot
 
 mkdir ~/lab03-$MYGIT/FIG
 cd ~/lab03-$MYGIT/FIG
 ```
-Download query my protein, FIG4, and perform a BLAST search using query protein
-# 2. Filtering out HSP to my Query Sequence
-## Version: Protein-Protein BLAST 2.16.0+
-### Perform BLAST search to find potential homologs with my query protein: FIG4, accession number: NP_055660.1
+# 2. Filtering out HSP homologs with e-value less than 1e-30 to my Query Sequence
+I performed a BLAST search to find and download potential homologs with my query protein: FIG4 (accession number: NP_055660.1) to further study my gene family, SAC-Domain Proteins within my 11 chordate species. I used BLASTp Version: Protein-Protein BLAST 2.16.0+. 
+
 ```
 ncbi-acc-download -F fasta -m protein "NP_055660.1"
 blastp -db ../allprotein.fas -query NP_055660.1.fa -outfmt 0 -max_hsps 1 -out FIG.blastp.typical.out
 ```
-Request tabular output for BLAST search
+I performed a multiple sequence alignment (MSA) for proteomes that matched my query protein, and filtered out the BLAST ouput for high-scoring putative homologs (HSP) with the e-value set at less than 1e-30 using the following code.
 ```
 blastp -db ../allprotein.fas -query NP_055660.1.fa  -outfmt "6 sseqid pident length mismatch gapopen evalue bitscore pident stitle"  -max_hsps 1 -out FIG.blastp.detail.out
-```
-### Filter BLAST output for high-scoring putative homologs
-set e-value to be less than 1e-30
-```
+
 awk '{if ($6< 1e-30)print $1 }' FIG.blastp.detail.out > FIG.blastp.detail.filtered.out
 ```
-## RESULTS of MSA performed using BLAST 
-Count the number of total hits after the HSP has been filtered out
+### MSA Analysis
+I analyzed the results of the MSA and found that there were 42 total hits for all the subject species after filtering out the HSP.
+This value was found using the following code to count the number of HSP hits.
 ```
 wc -l FIG.blastp.detail.filtered.out
 ```
-### 42 FIG.blastp.detail.filtered.out
-to find how many paralogs are found in each species
+The number of paralogs for each subject species is recorded in the table below. The table was generated using the following code:
 ```
 grep -o -E "^[A-Z]\.[a-z]+" FIG.blastp.detail.filtered.out  | sort | uniq -c
 ```
-### number of parlogs in each species
+### Number of Parlogs in each Subject Species
 | Species      |   Count   |
 |--------------|-----------|
 | C.carcharias |     2      |
@@ -115,134 +103,96 @@ grep -o -E "^[A-Z]\.[a-z]+" FIG.blastp.detail.filtered.out  | sort | uniq -c
 | X.laevis     |     2      |
 
 # 3. Alignment to Query Sequence
-Use [seqkit](https://bioinf.shenwei.me/seqkit/) to grab "pattern file" filtered out sequences from proteome file and naming the file "FIG.homologs.fas"
+## Global MSA
+I performed a global multiple sequence alignment using Muscle (Version: muscle 5.2.linux64). To begin, I first grabbed the "pattern file" filtered out sequences from proteome file using [seqkit](https://bioinf.shenwei.me/seqkit/). I printed the file with the filtered out sequences using Rscript and named the file "FIG.homologs.fas", can be found in the FIG folder. The lines of code used are below.
 ```
 seqkit grep --pattern-file ~/lab03-$MYGIT/FIG/FIG.blastp.detail.filtered.out ~/lab03-$MYGIT/allprotein.fas | seqkit grep -v -p "carpio" > ~/lab04-$MYGIT/FIG/FIG.homologs.fas
-```
-### Results: 42 patterns loaded from file
-Use MUSCLE to perform a global nultiple sequence alignment.
-## Muscle Version: muscle 5.2.linux64
-```
+
 muscle -align ~/lab04-$MYGIT/FIG/FIG.homologs.fas -output ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas
-```
-Use Rscript to print MSA.
-```
+
 Rscript --vanilla ~/lab04-$MYGIT/plotMSA.R  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas
 ```
+## Analysis of Global MSA
+### Alignment Lengths
+To analyze the global MSA I conducted using Muscle, I used Alignbuddy (Version: AlignBuddy 1.4.0 (from 2021-12-05)). I found that the alignment length was 2364, alighment length with gaps removed was 26, and alignment length with invariant (completely conserved) position removed was 2363. This led to my analysis that there were 2338 columns in the alignment with gaps, and 1 column in the alignment that is invariant. The codes I used that lead to this analysis are below.
 
-## Alignbuddy Version: AlignBuddy 1.4.0 (2021-12-05)
-To find Alignment length
+To find Alignment Length:
 ```
 alignbuddy  -al  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas
 ```
-### RESULTS: Alignment length = 2364
-To find Alignment length w gaps removed
+To find Alignment Length with Gaps Removed:
 ```
 alignbuddy -trm all  ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | alignbuddy  -al
 ```
-### RESULTS: Alignment length w Gaps Removed: 26
-To find Alignment length with invariant (completely conserved) positions removed
+To find Alignment Length with Invariant Positions Removed
 ```
-` alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | alignbuddy  -al`
+alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | alignbuddy  -al
 ```
-### RESULTS: Alignment length with invariant (completely conserved) positions removed = 2363
-### This lead to my analysis that there were 2338 columns in the alignment with gaps, and 1 column in the alignment that is invariant.
+### Average Percent Identity using 2 Programs
 
-To find the average percent identity among all sequences, I used T_coffee and Alignbuddy.
-
-## T-Coffee Version: T-COFFEE Version_13.46.0.919e8c6b
+I found the average percent identity among all sequences using two methods: T_coffee (Version: T-COFFEE Version_13.46.0.919e8c6b) and Alignbuddy. The results of each calculation different. T-coffee resulted in 41.78 (VAR = 568.39, STD = 23.84) percent identity of all sequences, while Alignbuddy results in 29.5956 percent identity of all sequences. The following are the codes I ran to gather these results:
 ```
 t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas -output sim
-```
-## Alignbuddy Version: AlignBuddy 1.4.0 (2021-12-05)
-```
+
 alignbuddy -pi ~/lab04-$MYGIT/FIG/FIG.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
      END{ print(100*sum/num) } '
 ```
-### RESULT: Average percent identity among all sequences
-## T-Coffee: 41.78 (VAR = 568.39, STD = 23.84)
-## Alignbuddy: 29.5956
 
 # 4. Constructing Species Tree
-I use Newick Utilities to constsruct a species tree.
-## Newick Utilities Version: 
-I constructed a ASCII rooted species tree for my 11 species, and generated a graphic (.svg file)
+I use Newick Utilities to constsruct a ASCII rooted species tree for my 11 species. The tree file is named "species.tre" and can be viewed as a .svg graphic or .pdf file in the FIG folder. I used the following lines of code to generate my species tree.
 ```
 echo "((((((F.catus,E.caballus)Laurasiatheria,H.sapiens)Boreoeutheria,(S.townsendi,(C.mydas,G.gallus)Archelosauria)Sauria)Amniota,X.laevis)Tetrapoda,(D.rerio,(S.salar,G.aculeatus)Euteleosteomorpha)Clupeocephala)Euteleostomi,C.carcharias)Gnathostomata;"  > ~/lab05-$MYGIT/species.tre
 
 nw_display ~/lab05-$MYGIT/species.tre
 nw_display -s ~/lab05-$MYGIT/species.tre > ~/lab05-$MYGIT/species.tre.svg
-```
-I converted the .svg to .pdf
-```
+
 convert ~/lab05-$MYGIT/species.tre.svg ~/lab05-$MYGIT/species.tre.pdf
 ```
 # 5. Constructing Gene Tree with Best Alignment
-I used IQ-TREE to find the maximum likehood tree estimate. 
-## IQTree Version: IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  1 2024
-(Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
-Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong)
-
-I calculated the the optimal amino acid substitution model and amino acid frequencies. At the same time a tree search and estimate tree branch lengths, which are the bootstrap values.
+### Searching for the Gene Tree with Best Alignment Using IQTree
+To construct a gene tree with the best alignment, I used IQ-TREE (Version: IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  1 2024) to find and generate the maximum likehood tree estimate by calculating the optimal amino acid substitution model and amino acid frequencies. At the same time, a tree search with branch length estimates was running. The brangth lengths are the bootstrap values. The optimal tree IQ-TREE found had a log likelihood of -29778.492. The model of rate heterogeneity for this tree was "Invar+FreeRate with 4 categories". I used the following lines of code to get these results:
 ```
 iqtree -s ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas -bb 1000 -nt 2 
-```
-## RESULT: log likelihood of the optimal tree that IQ-TREE found: -29778.492
 
-To find the rate heterogeneity multiplier to estimate the tree, I used the following code:
-```
 less ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.iqtree
 ```
-## RESULT: Model of substitution: Q.mammal+I+R4
-State frequencies: (model)
-Model of rate heterogeneity: Invar+FreeRate with 4 categories
+### Constructing a Midpoint Rooted Gene Tree from the Gene Tree with Best Alignment using Gotree
+I used Gotree (v0.4.5) to construct a midpoint rooted gene tree with the tree with best alignment generated by IQtree. The unrooted gene tree to constructed into a midpoint rooted tree using the code below. I generated two versions of this tree using Newick Utilities to view it in two formats. The first is a phylogram gene tree with different branch lengths, which are the bootstrap values previosuly calculted by IQTree. This phylogram tree is named "FIG.homologsf.al.mid.treefile". The second is a cladogram gene tree with uniform branch lengths that are annotated with the bootstrap values. This cladogram tree is easier to view, and is named "FIG.homologsf.al.midCl.treefile". Both tree can be viewed can found in the FIG folder and be viewed as both .svg graphic or a .pdf file. The lines of code I used to generated these gene tree files are below.
 
-I used gotree to construct a midpoint rooted gene tree. The unrooted gene tree to constructed into a midpoint rooted tree using the code below.
-## Gotree Version: v0.4.5
+Phylogram Gene Tree
 ```
 gotree reroot midpoint -i ~/lab05-$MYGIT/FIG/FIG.homologsf.al.fas.treefile -o ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
-```
-The rooted tree is a phylogram gene tree using Newick Utilities graphic (.svg), which gets converted into a .pdf file using the codes below. The different branch lengths are the bootstrap values previously calculated.
-```
+
 nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile  | nw_display -
 
 nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile | nw_display -w 1000 -b 'opacity:0' -s  >  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.svg -
 
 convert  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.svg  ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.pdf
 ```
-
-The phylogram is converted to a cladogram gene tree using Newick Utilities graphic (.svg), which gets converted into a .pdf file using the codes below. The cladogram is easier to view than the phylogram because the length of the branches are uniform.
+Cladogram Gene Tree (Uniform Branches, easier to view)
 ```
 nw_order -c n ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile | nw_topology - | nw_display -s  -w 1000 > ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.svg -
 
 convert ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.svg ~/lab05-$MYGIT/FIG/FIG.homologsf.al.midCl.treefile.pdf
 ```
 # 6. Reconciling the Gene Tree and Species Tree
-I performed the reconciliation of the gene tree and species tree using Notung to estimate duplication events and loss events. The resulting reconciliation will allow me to distinguish orthologs and paralogs.
-## Notung Version: 3 (Notung-3.0_24-beta)
-I used the following commands to make a new directory with a copy of my midpoint gene tree file
-```
-mkdir ~/lab06-$MYGIT/FIG
-cd ~/lab06-$MYGIT/FIG
-cp ~/lab05-$MYGIT/FIG/FIG.homologsf.al.mid.treefile ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile
-```
-I ran Notung to reconcile the gene tree, with the species tree to assign internal node names for the common ancestral organisms (nodes).
+### Using Notung
+I performed the reconciliation of the gene tree and species tree using Notung (Version: 3 (Notung-3.0_24-beta) to estimate duplication events and loss events. I assigned the internal node names with the common ancestral organism names. The gene tree reconciliation allow me to distinguish orthologs and paralogs, and resulted in 21 total duplication event and 59 total loss events (in the rec.event.txt file). I used the following line of code to perform this analyses.
 ```
 java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/species.tre -g ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/FIG/
 ```
-## RESULTS: rec.events.txt file: Duplications: 21 and Losses: 59
-
 # 7. Constructing a Reconciled Gene Tree Superimposed into Species Tree
-I generated a RecPhyloXML object using python to view the gene-within-species tree reconciled using the Thirdkind program.
-## Python Version: Python 2.7, conda environment
-## Thirdkind Version: Thirdkind 3.6.8
+### Using Python and Thirdkind
+I generated a RecPhyloXML object using python (Version: Python 2.7, conda environment) to view the gene-within-species tree reconciled using Thirdkind (Version: Thirdkind 3.6.8). The cost of my reconciled tree was 90.5. The Reconciled Gene Tree Superimposed into Species Tree is named "FIG.homologsf.al.mid.treefile.rec" and can be view as a .pdf or .svg graphic in the FIG folder. I used the following lines of code to generate these files.
 ```
 python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg --include.species
-```
-I generated a graphic (.svg file) and converted it to a .pdf file using Thirdkind with the following lines of codes:
-```
+
 thirdkind -Iie -D 40 -f ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.ntg.xml -o  ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.svg
 
 convert  -density 150 ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.svg ~/lab06-$MYGIT/FIG/FIG.homologsf.al.mid.treefile.rec.pdf
 ```
-## RESULTS: The cost of my reconciled tree is 90.5
+# End Notes
+This concludes my final repository and the code used to generate my results and analyses. Further interpretation of my results can be found in my term paper, submitted via Brightspace.
+
+Copyright of all work found in this repository belongs to Joshua Rest, 2024.
+All analyses in this repository regarding the SAC-domain protein and FIG4 protein was generated by Sara Poon, 2024. 
