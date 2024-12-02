@@ -4,7 +4,7 @@ The goal of this repository is to walk you throught all the steps I took to supp
 
 # Introduction 
 Below is the table of contents and sequential order of the steps I took to find and analyze my results.
-The graphs generated
+The gene and species tree figures generated can be found in the folder titled "FIG".
 1. BLAST Proteome Database
 2. Filtering out HSP homologs with e-value less than 1e-30 to my Query Sequence
 3. Alignment to Query Sequence

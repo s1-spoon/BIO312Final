@@ -988,3 +988,10 @@
   988  git push 
   989  cd ~/bio312final
   990  history > bio312final.commandhistory.txt 
+  991  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  992  git add .
+  993  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  994  git pull --no-edit
+  995  git push 
+  996  cd ~/bio312final
+  997  history > bio312final.commandhistory.txt 
